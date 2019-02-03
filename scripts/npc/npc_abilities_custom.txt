@@ -441,8 +441,8 @@
 	{
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"3"
-		"AbilityCastPoint"	"0.5"
-		"AbilityCooldown"	"12 10 8"
+		"AbilityCastPoint"	"0.1"
+		"AbilityCooldown"	"10 8 6"
 		"AbilityManaCost"	"100"
 		"AbilityCastRange"	"9999"
 		"AbilityChannelTime"	"3"
@@ -698,7 +698,7 @@
 			"06"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"stun_duration"	"1.4 1.4 1.4"
+				"stun_duration"	"1.4 1.7 2"
 			}
 			"07"
 			{
@@ -721,7 +721,7 @@
 				"ghostship_absorb"	"0"
 			}
 		}
-		"AbilityDamage"	"200 300 400"
+		"AbilityDamage"	"150 250 350"
 	}
 
 	"lina_laguna_blade"
@@ -8172,7 +8172,7 @@
 				"EffectAttachType"	"follow_overhead"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"6"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"7"
 				}
 				"EffectName"	"effect/zhanshi/1.vpcf"
 				"Passive"	"1"
@@ -8228,7 +8228,7 @@
 				"EffectAttachType"	"follow_overhead"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"10"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"9"
 				}
 				"EffectName"	"effect/zhanshi/1.vpcf"
 				"Passive"	"1"
@@ -8255,7 +8255,7 @@
 				"IsDebuff"	"1"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-40"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-50"
 				}
 				"Passive"	"1"
 				"EffectName"	"particles/items2_fx/veil_of_discord_debuff.vpcf"
@@ -8283,7 +8283,7 @@
 				"IsDebuff"	"1"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-40"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-30"
 				}
 				"Passive"	"1"
 				"EffectName"	"particles/items2_fx/veil_of_discord_debuff.vpcf"
@@ -9566,7 +9566,7 @@
 				"IsHidden"	"1"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"400"
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"350"
 				}
 				"OnAttackLanded"
 				{
@@ -9650,7 +9650,7 @@
 				"IsHidden"	"1"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"400"
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"450"
 				}
 				"OnAttackLanded"
 				{
@@ -10487,7 +10487,7 @@
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"heal"	"100 150 200"
+				"heal"	"100 175 250"
 				"LinkedSpecialBonus"	"special_bonus_unique_necrophos_4"
 			}
 			"03"
@@ -11426,16 +11426,19 @@
 			{
 				"var_type"	"FIELD_INTEGER"
 				"splash_damage_percent"	"75"
+				"LinkedSpecialBonus"	"special_bonus_unique_dragon_knight_6"
 			}
 			"09"
 			{
 				"var_type"	"FIELD_INTEGER"
 				"frost_bonus_movement_speed"	"-30"
+				"LinkedSpecialBonus"	"special_bonus_unique_dragon_knight_5"
 			}
 			"10"
 			{
 				"var_type"	"FIELD_INTEGER"
 				"frost_bonus_attack_speed"	"-30"
+				"LinkedSpecialBonus"	"special_bonus_unique_dragon_knight_5"
 			}
 			"11"
 			{
@@ -11589,12 +11592,12 @@
 			"04"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"duration"	"3 4 5"
+				"duration"	"2 3 4"
 			}
 			"05"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"duration_scepter"	"3 4 5"
+				"duration_scepter"	"2 3 4"
 			}
 			"06"
 			{
@@ -12090,7 +12093,7 @@
 				"projectile_speed"	"900"
 			}
 		}
-		"AbilityDamage"	"250 350 450"
+		"AbilityDamage"	"200 300 400"
 	}
 
 	"e101"
