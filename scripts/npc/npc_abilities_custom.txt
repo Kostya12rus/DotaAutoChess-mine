@@ -349,7 +349,7 @@
 			"04"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"axe_damage"	"70 110 150"
+				"axe_damage"	"60 100 140"
 				"LinkedSpecialBonus"	"special_bonus_unique_beastmaster"
 			}
 			"05"
@@ -552,7 +552,7 @@
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"damage_max"	"100 200 300"
+				"damage_max"	"100 175 250"
 			}
 			"03"
 			{
@@ -727,7 +727,7 @@
 	"lina_laguna_blade"
 	{
 		"MaxLevel"	"3"
-		"AbilityCastPoint"	"0.5"
+		"AbilityCastPoint"	"0.2"
 		"AbilityCooldown"	"13 10 7"
 		"AbilityManaCost"	"100"
 		"AbilityCastRange"	"9999"
@@ -8255,7 +8255,7 @@
 				"IsDebuff"	"1"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-50"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-40"
 				}
 				"Passive"	"1"
 				"EffectName"	"particles/items2_fx/veil_of_discord_debuff.vpcf"
@@ -8283,7 +8283,7 @@
 				"IsDebuff"	"1"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-30"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-40"
 				}
 				"Passive"	"1"
 				"EffectName"	"particles/items2_fx/veil_of_discord_debuff.vpcf"

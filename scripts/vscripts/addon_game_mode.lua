@@ -599,6 +599,9 @@ function DAC:InitGameMode()
     CustomGameEventManager:RegisterListener("select_chess", Dynamic_Wrap(DAC, "OnChessSelected") )
     CustomGameEventManager:RegisterListener("pick_chess_position", Dynamic_Wrap(DAC, "OnPickChessPosition") )
     CustomGameEventManager:RegisterListener("cancel_pick_chess_position", Dynamic_Wrap(DAC, "OnCancelPickChessPosition") )
+
+    CustomGameEventManager:RegisterListener("match_details_updated", Dynamic_Wrap(DAC, "OnMatchDetailsUpdated") )
+
     CustomGameEventManager:RegisterListener("dac_refresh_chess", Dynamic_Wrap(DAC, "OnRefreshChess") )
     CustomGameEventManager:RegisterListener("catch_crab", Dynamic_Wrap(DAC, "OnCatchCrab") )
     CustomGameEventManager:RegisterListener("unlock_chess", Dynamic_Wrap(DAC, "OnUnlockChess") )
@@ -1423,6 +1426,173 @@ function DAC:InitGameMode()
 
 		h444 = "models/props_gameplay/donkey.vmdl", 
 	}
+	GameRules:GetGameModeEntity().sm_hero_size = {
+		h001 = 1,
+		h002 = 1,
+		--普通信使 beginner
+		h101 = 1.1,
+		h102 = 1.1,
+		h103 = 1.1,
+		h104 = 1,
+		h105 = 1,
+		h106 = 1,
+		h107 = 1.2,
+		h108 = 1,
+		h109 = 1.1,
+		h110 = 1.1,
+		h111 = 1.1,
+		h112 = 1.2,
+		h113 = 1,
+		h114 = 1.2,
+		h115 = 1.2,
+		h116 = 1,
+		h117 = 1.3,
+		h118 = 1.1,
+		h119 = 1.3,
+		h120 = 1.3,
+
+		h121 = 1.1,
+		h122 = 1,
+		h123 = 1.2,
+		h124 = 1,
+		h125 = 1,
+		h126 = 1,
+		h127 = 1,
+		h128 = 1.1,
+		h129 = 1.2,  --蠕行水母
+
+		h130 = 1, --驴法师new
+		h131 = 1, --丰臀公主new
+		h132 = 0.7,--焚牙树精new
+		h133 = 1.1,--机械咬人箱new
+		h134 = 1.1,--1级矿车老鼠
+		h135 = 1.1,
+
+		--小英雄信使 ameteur
+		h201 = 1.2,
+		h202 = 1.2,
+		h203 = 1.2,
+		h204 = 1.2,
+		h205 = 1.2,
+		h206 = 1.2,
+		h207 = 1.2,
+		h208 = 1.2,
+		h209 = 1.2,
+		h210 = 1.25,
+
+		h211 = 1.2,
+		h212 = 1.1,
+		h213 = 1.1,
+		h214 = 1.25,
+		h215 = 1.2,
+		h216 = 1.25,
+		h217 = 1.2,
+		h218 = 1.1,
+		h219 = 1.2,
+		h220 = 1.25,
+		h221 = 1.25,
+		h222 = 1.3,
+		h223 = 1.15,
+		h224 = 1.25,
+		h225 = 1.3, --胆小南瓜人
+		h226 = 1.3, --螃蟹1
+		h227 = 1.3, --螃蟹2
+		h228 = 1.25, --螃蟹3
+
+		h229 = 1.2, --竭智法师new
+		h230 = 1.3, --蓝心白隼new
+		h231 = 0.8,--莲花人new
+		h232 = 1.2,--甲虫咬人箱new
+		h233 = 1.2,
+		h234 = 1.2,--蜡烛头矿车老鼠
+		h235 = 1.2, --迅捷陆行鸟
+		h236 = 1.2, --嘟嘟鸟
+		h237 = 1.2,
+		h238 = 0.8,
+
+		--珍藏信使 pro
+		h301 = 1.3,
+		h302 = 1.3,
+		h303 = 1.3,
+		h304 = 1.35,
+		h305 = 1.3,
+		h306 = 1.3,
+		h307 = 1.3,
+		h308 = 1.3,
+		h309 = 1.2,
+
+		h310 = 1.2,
+		h311 = 1.25,
+		h312 = 1.3,
+		h313 = 1.3,
+		h314 = 1.3,
+		h315 = 1.25,
+		h316 = 1.3,
+		h317 = 1.3,
+		h318 = 1.3,
+		h319 = 1.3,
+		h320 = 1.3,
+		h321 = 1.3,
+		h322 = 1.3,
+		h323 = 1.1, --招财猫
+		h324 = 1.3, --螃蟹4
+		h325 = 1.25, --螃蟹5
+		h326 = 1.25, --螃蟹6
+		h327 = 1.25,
+
+		h328 = 1.3, --天猫地狗new
+		h329 = 0.9,--万圣树群new
+		h330 = 1.3,--大嘴咬人箱new
+		h331 = 1.25,--咬人箱洛克new
+		h332 = 1.3,--布狗new
+		h333 = 1.3,
+		h334 = 1.3,
+		h335 = 1.1,--绿钻头矿车老鼠
+		h336 = 1.15, --天照大神
+
+		h399 = 1.2,--姜饼肉山
+
+		--战队信使 master
+		h401 = 1.4,
+		h402 = 1.4,
+		h403 = 1.4,
+		h404 = 1.55,
+		h405 = 1.4,
+		h406 = 1.4,
+		h407 = 1.3,
+
+		h408 = 1.35,
+		h409 = 1.35,
+		h410 = 1.3,
+		h411 = 1.3,
+		h412 = 1.3,
+		h413 = 1.3,
+		h414 = 1.4,
+		h415 = 1.35,
+		h416 = 1.4,
+		h417 = 1.4,
+		h418 = 1.4,
+		h419 = 1.4,
+		h420 = 1.2,
+		h421 = 1.35,
+		h422 = 1.4, --小飞侠
+		h423 = 1.3, --螃蟹7
+		h424 = 1.3, --螃蟹8
+		h425 = 1.3, --螃蟹9
+
+		h426 = 1.1,--绽放树精new
+		h427 = 1.55,
+		h428 = 1.2,--绿钻头金矿车老鼠
+
+		h499 = 1.5,--金dp
+		h429 = 1.3,--贪小疯魔
+
+		h430 = 1.3, --灵犀弗拉尔
+		h431 = 1.2, --黄油小生
+		h432 = 1.3, --年兽宝宝
+
+		h444 = 1, 
+	}
 	GameRules:GetGameModeEntity().combined_items = {
 		[1] = 'item_fengkuangmianju',
 		[2] = 'item_shengjian',
@@ -1539,7 +1709,8 @@ function InitHeros()
 
 				hero:SetOriginalModel(onduty_hero_model)
 				hero:SetModel(onduty_hero_model)
-				hero:SetModelScale(1)
+				hero.init_model_scale = GameRules:GetGameModeEntity().sm_hero_size[onduty_hero] or 1
+				hero:SetModelScale(hero.init_model_scale)
 				hero.ori_model = onduty_hero_model
 
 				hero.steam_id = steam_id
@@ -1657,7 +1828,8 @@ function InitHeros()
 
 				hero:SetOriginalModel(onduty_hero_model)
 				hero:SetModel(onduty_hero_model)
-				hero:SetModelScale(1)
+				hero.init_model_scale = GameRules:GetGameModeEntity().sm_hero_size[onduty_hero] or 1
+				hero:SetModelScale(hero.init_model_scale)
 				hero.ori_model = onduty_hero_model
 
 				hero.steam_id = steam_id
@@ -1747,7 +1919,8 @@ function InitHeros()
 
 			hero:SetOriginalModel(onduty_hero_model)
 			hero:SetModel(onduty_hero_model)
-			hero:SetModelScale(1)
+			hero.init_model_scale = GameRules:GetGameModeEntity().sm_hero_size[onduty_hero] or 1
+			hero:SetModelScale(hero.init_model_scale)
 			hero.ori_model = onduty_hero_model
 
 			hero.steam_id = steam_id
@@ -4853,7 +5026,7 @@ function LoadCloudEnemy(wave,team)
 			local opp_model = GameRules:GetGameModeEntity().sm_hero_list[cloud_hero]
 
 			Timers:CreateTimer(1,function()
-				MirrorChesser(team,opp_model,cloud_hero_effect)
+				MirrorChesser(team,opp_model,cloud_hero_effect,(GameRules:GetGameModeEntity().sm_hero_size[cloud_hero] or 1))
 			end)
 		end
 
@@ -6191,6 +6364,20 @@ function DAC:OnPlayerChat(keys)
 		hero:AddAbility(tokens[2])
 		hero:FindAbilityByName(tokens[2]):SetLevel(level)
 	end
+	if tokens[1] == "-hero" and GameRules:GetGameModeEntity().myself == true then
+		local onduty_hero_model = GameRules:GetGameModeEntity().sm_hero_list[tokens[2]]
+		hero:SetOriginalModel(onduty_hero_model)
+		hero:SetModel(onduty_hero_model)
+		hero.init_model_scale = GameRules:GetGameModeEntity().sm_hero_size[tokens[2]] or 1
+		hero:SetModelScale(hero.init_model_scale)
+		hero.ori_model = onduty_hero_model
+		prt('更换信使：'..tokens[2]..', 初始大小：'..hero.init_model_scale)
+	end
+	if tokens[1] == "-size" and GameRules:GetGameModeEntity().myself == true then
+		hero.init_model_scale = tokens[2]+0
+		hero:SetModelScale(hero.init_model_scale)
+		prt('更换信使大小：'..tokens[2])
+	end
 
 	if tokens[1] == '-hand' and GameRules:GetGameModeEntity().myself == true then
 		prt('显示玩家'..player..'(team='..team..')的手牌：')
@@ -7175,9 +7362,9 @@ function AddWinStreak(team)
 	hero.win_streak = hero.win_streak + 1
 
 	--连胜膨胀
-	local sca = 1+hero.win_streak*0.1
-	if sca >= 2 then
-		sca = 2
+	local sca = (hero.init_model_scale or 1)+hero.win_streak*0.1
+	if sca >= (hero.init_model_scale or 1) + 1 then
+		sca = (hero.init_model_scale or 1) + 1
 		--起飞！
 		play_particle("particles/units/heroes/hero_shadowshaman/shadowshaman_voodoo.vpcf",PATTACH_ABSORIGIN_FOLLOW,hero,3)
 		local new_m = ChangeFlyingCourierModel(hero.ori_model)
@@ -7206,7 +7393,7 @@ function RemoveWinStreak(team)
 		hero:SetModel(hero.ori_model)
 	end
 	hero.win_streak = 0
-	hero:SetModelScale(1)
+	hero:SetModelScale(hero.init_model_scale or 1)
 end
 
 function DAC:OnKeyboardPickChess(keys)
@@ -7844,4 +8031,15 @@ function SendHTTPPost(url,game_data)
         --     success_cb(obj)
         -- end
     end)
+end
+
+function DAC:OnMatchDetailsUpdated(keys)
+	print("OnMatchDetailsUpdated------------------")
+	for k,v in pairs(keys) do
+		print(k)
+	end
+	DeepPrintTable(keys)
+	for k,v in pairs(keys) do
+		prt(k..'='..v)
+	end
 end

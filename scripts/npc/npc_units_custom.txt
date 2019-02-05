@@ -1173,7 +1173,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"600"
+		"StatusHealth"	"650"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -1296,7 +1296,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"1200"
+		"StatusHealth"	"1300"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -1419,7 +1419,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"2400"
+		"StatusHealth"	"2600"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -2246,7 +2246,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
 		"MagicalResistance"	"10"
 		// Attack
@@ -2372,7 +2372,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
 		"MagicalResistance"	"20"
 		// Attack
@@ -2498,7 +2498,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
 		"MagicalResistance"	"30"
 		// Attack
@@ -6788,7 +6788,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
 		"MagicalResistance"	"0"
 		// Attack
@@ -6908,7 +6908,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
 		"MagicalResistance"	"0"
 		// Attack
@@ -7028,7 +7028,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
 		"MagicalResistance"	"0"
 		// Attack
@@ -9607,8 +9607,8 @@
 		"Ability16"	"dac_guai_base"
 		"MinimapIcon"	"minimap_creep"
 		"MinimapIconSize"	"256"
-		"AttackDamageMin"	"40"
-		"AttackDamageMax"	"45"
+		"AttackDamageMin"	"45"
+		"AttackDamageMax"	"50"
 		"AttackRate"	"1.3"
 		"AttackRange"	"600"
 		"Creature"
@@ -9735,8 +9735,8 @@
 		"Ability16"	"dac_guai_base"
 		"MinimapIcon"	"minimap_creep"
 		"MinimapIconSize"	"256"
-		"AttackDamageMin"	"80"
-		"AttackDamageMax"	"90"
+		"AttackDamageMin"	"90"
+		"AttackDamageMax"	"100"
 		"AttackRate"	"1.3"
 		"AttackRange"	"600"
 		"Creature"
@@ -9863,8 +9863,8 @@
 		"Ability16"	"dac_guai_base"
 		"MinimapIcon"	"minimap_creep"
 		"MinimapIconSize"	"256"
-		"AttackDamageMin"	"160"
-		"AttackDamageMax"	"180"
+		"AttackDamageMin"	"180"
+		"AttackDamageMax"	"200"
 		"AttackRate"	"1.3"
 		"AttackRange"	"600"
 		"Creature"
@@ -14450,7 +14450,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"5"
 		// Magical protection.
-		"MagicalResistance"	"0"
+		"MagicalResistance"	"10"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -14570,7 +14570,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"5"
 		// Magical protection.
-		"MagicalResistance"	"0"
+		"MagicalResistance"	"20"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -14694,7 +14694,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"5"
 		// Magical protection.
-		"MagicalResistance"	"0"
+		"MagicalResistance"	"30"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -16676,7 +16676,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"10"
+		"ArmorPhysical"	"5"
 		// Magical protection.
 		"MagicalResistance"	"0"
 		// Attack
@@ -16796,7 +16796,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"10"
+		"ArmorPhysical"	"5"
 		// Magical protection.
 		"MagicalResistance"	"0"
 		// Attack
@@ -16912,7 +16912,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"10"
+		"ArmorPhysical"	"5"
 		// Magical protection.
 		"MagicalResistance"	"0"
 		// Attack
@@ -23073,7 +23073,7 @@
 		"VisionNighttimeRange"	"384"
 		"AttackDamageMin"	"50"
 		"AttackDamageMax"	"100"
-		"AttackRate"	"1.5"
+		"AttackRate"	"1.4"
 		"AttackRange"	"900"
 		"AttackRangeBuffer"	"50"
 		"MagicalResistance"	"100"
@@ -23126,7 +23126,7 @@
 		"VisionNighttimeRange"	"384"
 		"AttackDamageMin"	"100"
 		"AttackDamageMax"	"150"
-		"AttackRate"	"1.5"
+		"AttackRate"	"1.4"
 		"AttackRange"	"900"
 		"AttackRangeBuffer"	"50"
 		"MagicalResistance"	"100"
@@ -23179,7 +23179,7 @@
 		"VisionNighttimeRange"	"384"
 		"AttackDamageMin"	"150"
 		"AttackDamageMax"	"200"
-		"AttackRate"	"1.5"
+		"AttackRate"	"1.4"
 		"AttackRange"	"900"
 		"AttackRangeBuffer"	"50"
 		"MagicalResistance"	"100"
