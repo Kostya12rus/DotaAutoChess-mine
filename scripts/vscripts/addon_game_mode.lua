@@ -2455,7 +2455,7 @@ function StartAPrepareRound()
 	end)
 end
 function AddPickAndRemoveAbility(v)
-	Timers:CreateTimer(1,function()
+	Timers:CreateTimer(1.5,function()
 		if v:FindAbilityByName('pick_chess') == nil then
 			AddAbilityAndSetLevel(v,'pick_chess')
 		end
@@ -2474,7 +2474,7 @@ end
 function RestoreARound(teamid)
 	ClearARound(teamid)
 
-	Timers:CreateTimer(RandomFloat(1,1.5),function()
+	Timers:CreateTimer(RandomFloat(0.5,1),function()
 		for _,v in pairs(GameRules:GetGameModeEntity().mychess[teamid]) do
 			local x = CreateUnitByName(v.chess,XY2Vector(v.x,v.y,teamid),true,nil,nil,teamid)
 			MakeTiny(x)
