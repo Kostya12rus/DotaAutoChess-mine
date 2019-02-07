@@ -477,6 +477,7 @@ function Precache( context )
 		"models/items/courier/pangolier_squire/pangolier_squire.vmdl",
 		"models/items/courier/sltv_10_courier/sltv_10_courier.vmdl",
 		"models/items/courier/nian_courier/nian_courier.vmdl",
+		"models/items/courier/nilbog/nilbog.vmdl",
 	} 
     print("Precache...")
 	local t=table.maxn(mxx)
@@ -1644,14 +1645,14 @@ function InitHeros()
 	if PlayerResource:GetPlayerCount() == 1 then
 		--单人获取云对战列表
 		local url = "http://101.200.189.65:431/dac/lineup/list?hehe="..RandomInt(1,10000)
-		SendHTTP(url, function(t)
+		SendHTTP(url.."&from=InitHeros", function(t)
 			prt('LOAD CLOUD LINEUP OK!')
 			GameRules:GetGameModeEntity().cloudlineup = t.data
 		end)
 	end
 	--从服务器获取玩家信息
 	local url = "http://101.200.189.65:431/dac/heros/get/@"..GameRules:GetGameModeEntity().steamidlist_heroindex.."?hehe="..RandomInt(1,10000).."&key="..GetDedicatedServerKey('dac')
-	SendHTTP(url, function(t)
+	SendHTTP(url.."&from=InitHeros", function(t)
 		if t.err == 0 then
 			prt('CONNECT SERVER OK!')
 			for steam_id,user_info in pairs(t.user_info) do
@@ -3669,7 +3670,7 @@ function SyncHP(hero)
 				GameRules:GetGameModeEntity().death_stack = GameRules:GetGameModeEntity().last_player_steamid..','..GameRules:GetGameModeEntity().death_stack
 				if GetMapName() ~= 'practice' then 
 					local url = "http://101.200.189.65:431/dac/ranking/add/@"..GameRules:GetGameModeEntity().death_stack.."?hehe="..RandomInt(1,10000).."&winner_lineup="..lineup.."&duration="..dur.."&key="..GetDedicatedServerKey('dac')
-					SendHTTP(url, function(t)
+					SendHTTP(url.."&from=SyncHP", function(t)
 						if t.err == 0 then
 							prt('POST GAME OK!')
 							for u,v in pairs(t.mmr_info) do
@@ -6401,6 +6402,16 @@ function DAC:OnPlayerChat(keys)
 		GameRules:GetGameModeEntity().show_damage = false
 	end
 
+	if tokens[1] == '-catch' and GameRules:GetGameModeEntity().myself == true then
+		prt('CATCH CRAB')
+		DAC:OnCatchCrab({
+			url=tokens[2],
+			cb='aaa'
+		})
+	end
+
+	
+
 	-- ShowCombat({
 	-- 	t = 'say',
 	-- 	player = hero:GetPlayerID(),
@@ -7676,13 +7687,14 @@ end
 
 --辅助功能——捕捉一只螃蟹，发回pui
 function DAC:OnCatchCrab(keys)
-	local url = keys.url.."&key="..GetDedicatedServerKey('dac')
+	local url = keys.url.."&key="..GetDedicatedServerKey('dac').."&from=OnCatchCrab"
 	local cb = keys.cb
-	if url == null or cb == null then
+	if url == nil or cb == nil then
 		return
 	end
 	local player_id = keys.player_id
 	local steam_id = GameRules:GetGameModeEntity().playerid2steamid[player_id]
+
 	if string.find(url,'ranking/add') then
 		return
 	end
@@ -8018,7 +8030,7 @@ function SendMaxData(t,dur)
 end
 
 function SendHTTPPost(url,game_data)
-    local req = CreateHTTPRequestScriptVM("POST",url)
+    local req = CreateHTTPRequestScriptVM("POST",url.."&from=SendHTTPPost")
     -- ScoreSystemUpdateCount = ScoreSystemUpdateCount + 1
     req:SetHTTPRequestGetOrPostParameter("data",json.encode(game_data))
     req:Send(function(res)
