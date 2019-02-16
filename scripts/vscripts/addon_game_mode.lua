@@ -8019,8 +8019,8 @@ function QiquWaibiao(keys)
 	if attacker:Script_GetAttackRange() < 250 then  
 		--近战
 		EmitSoundOn("Hero_Tiny.CraggyExterior",attacker)
-		attacker:AddNewModifier(attacker,nil,"modifier_stunned",{ duration = 2 })
-		attacker:AddNewModifier(attacker,nil,"modifier_medusa_stone_gaze_stone",{ duration = 2 })
+		attacker:AddNewModifier(attacker,nil,"modifier_stunned",{ duration = duration })
+		attacker:AddNewModifier(attacker,nil,"modifier_medusa_stone_gaze_stone",{ duration = duration })
 	end
 end
 
