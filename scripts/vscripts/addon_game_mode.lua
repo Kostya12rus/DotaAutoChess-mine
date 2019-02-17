@@ -590,7 +590,10 @@ function DAC:InitGameMode()
 		[13] = {r=255,g=0,b=255},
 	}
 
-	SetTeamCustomHealthbarColor(DOTA_TEAM_NEUTRALS, 255,0,0)
+	-- PlayerResource:SetCustomPlayerColor(0, 0,0,255)
+	-- PlayerResource:SetCustomPlayerColor(1, 0,0,255)
+
+	-- SetTeamCustomHealthbarColor(DOTA_TEAM_NEUTRALS, 255,0,0)
 	-- SetTeamCustomHealthbarColor(DOTA_TEAM_CUSTOM_1, 0,192,0)
 	-- SetTeamCustomHealthbarColor(DOTA_TEAM_CUSTOM_2, 128,128,128)
 	-- SetTeamCustomHealthbarColor(DOTA_TEAM_CUSTOM_3, 255,255,192)
@@ -599,6 +602,7 @@ function DAC:InitGameMode()
 	-- SetTeamCustomHealthbarColor(DOTA_TEAM_CUSTOM_6, 255,100,200)
 	-- SetTeamCustomHealthbarColor(DOTA_TEAM_CUSTOM_7, 255,156,156)
 	-- SetTeamCustomHealthbarColor(DOTA_TEAM_CUSTOM_8, 255,0,255)
+	
 	SetTeamCustomHealthbarColor(DOTA_TEAM_CUSTOM_1, 128,255,128)
 	SetTeamCustomHealthbarColor(DOTA_TEAM_CUSTOM_2, 128,255,128)
 	SetTeamCustomHealthbarColor(DOTA_TEAM_CUSTOM_3, 128,255,128)
