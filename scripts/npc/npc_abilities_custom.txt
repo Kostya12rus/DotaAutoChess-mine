@@ -13608,6 +13608,7 @@
 	"outofgame"
 	{
 		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"abyssal_underlord_dark_rift"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"Modifiers"
 		{
