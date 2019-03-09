@@ -490,6 +490,10 @@ function Precache( context )
 		"particles/econ/items/zeus/arcana_chariot/zeus_arcana_thundergods_wrath_start_bolt_parent.vpcf",
 		"models/items/lycan/wolves/blood_moon_hunter_wolves/blood_moon_hunter_wolves.vmdl",
 		"models/items/lycan/ultimate/blood_moon_hunter_shapeshift_form/blood_moon_hunter_shapeshift_form.vmdl",
+		"models/items/courier/krobeling_gold/krobeling_gold.vmdl",
+		"models/items/courier/krobeling_gold/krobeling_gold_flying.vmdl",
+		"effect/jin_dp/courier_krobeling_gold_ambient.vpcf",
+		"effect/nianshou/courier_nian_ambient.vpcf",
 	} 
     print("Precache...")
 	local t=table.maxn(mxx)
@@ -877,7 +881,7 @@ function DAC:InitGameMode()
 		[12] = {},
 		[13] = {},
 	}
-	GameRules:GetGameModeEntity().effect_list = "e101,e102,e103,e104,e107,e108,e111,e112,e113,e114,e202,e203,e205,e210,e213,e214,e301,e302,e303,e304,e305,e306,e308,e309,e311,e312,e313,e315,e317,e319,e320,e321,e401,e402,e403,e404,e405,e406,e407,e408,e409,e410,e451,e452,e453,e454,e455,e456,e457,e458,e459"
+	GameRules:GetGameModeEntity().effect_list = "e101,e102,e103,e104,e107,e108,e111,e112,e113,e114,e201,e202,e203,e205,e210,e213,e214,e301,e302,e303,e304,e305,e306,e308,e309,e311,e312,e313,e315,e317,e319,e320,e321,e401,e402,e403,e404,e405,e406,e407,e408,e409,e410,e451,e452,e453,e454,e455,e456,e457,e458,e459"
 
 	GameRules:GetGameModeEntity().chess_list_by_mana = {
 		[1] = {'chess_tusk','chess_axe','chess_eh','chess_om','chess_clock','chess_ss','chess_bh','chess_bat','chess_dr','chess_tk','chess_am','chess_tiny'},
@@ -1506,7 +1510,7 @@ function DAC:InitGameMode()
 		h427 = "models/courier/smeevil_magic_carpet/smeevil_magic_carpet.vmdl",
 		h428 = "models/items/courier/mole_messenger/mole_messenger_lvl7.vmdl",--绿钻头金矿车老鼠
 
-		h499 = "models/items/courier/krobeling_gold/krobeling_gold_flying.vmdl",--金dp
+		h499 = "models/items/courier/krobeling_gold/krobeling_gold.vmdl",--金dp
 		h429 = "models/items/courier/nilbog/nilbog.vmdl",--贪小疯魔
 
 		h430 = "models/courier/frull/frull_courier.vmdl", --灵犀弗拉尔
@@ -1515,6 +1519,13 @@ function DAC:InitGameMode()
 
 		h444 = "models/props_gameplay/donkey.vmdl", 
 	}
+
+	GameRules:GetGameModeEntity().courier_flyup_effect_list = {
+		h208 = "effect/xukong/cour_rex_flying.vpcf",
+		h432 = "effect/nianshou/courier_nian_ambient.vpcf",
+		h499 = "effect/jin_dp/courier_krobeling_gold_ambient.vpcf",
+	}
+
 	GameRules:GetGameModeEntity().sm_hero_size = {
 		h001 = 1,
 		h002 = 1,
@@ -1565,7 +1576,7 @@ function DAC:InitGameMode()
 		h205 = 1.2,
 		h206 = 1.2,
 		h207 = 1.2,
-		h208 = 1.2,
+		h208 = 1.3,
 		h209 = 1.2,
 		h210 = 1.25,
 
@@ -1673,7 +1684,7 @@ function DAC:InitGameMode()
 		h427 = 1.55,
 		h428 = 1.2,--绿钻头金矿车老鼠
 
-		h499 = 1.5,--金dp
+		h499 = 1.55,--金dp
 		h429 = 1.3,--贪小疯魔
 
 		h430 = 1.3, --灵犀弗拉尔
@@ -1715,7 +1726,7 @@ function InitHeros()
 			GameRules:GetGameModeEntity().steamidlist_heroindex = GameRules:GetGameModeEntity().steamidlist_heroindex..','..sid..'_'..GameRules:GetGameModeEntity().playerid2hero[pid]:entindex()
 		end
 	end
-	if string.find(GameRules:GetGameModeEntity().steamidlist,'76561198101849234') or string.find(GameRules:GetGameModeEntity().steamidlist,"76561198090931971") or string.find(GameRules:GetGameModeEntity().steamidlist,"76561198132023205") or string.find(GameRules:GetGameModeEntity().steamidlist,"76561198079679584") then
+	if string.find(GameRules:GetGameModeEntity().steamidlist,'76561198101849234') or string.find(GameRules:GetGameModeEntity().steamidlist,'76561198090961025') or string.find(GameRules:GetGameModeEntity().steamidlist,"76561198090931971") or string.find(GameRules:GetGameModeEntity().steamidlist,"76561198132023205") or string.find(GameRules:GetGameModeEntity().steamidlist,"76561198079679584") then
 		GameRules:GetGameModeEntity().myself = true
 	end
 	--防控制台作弊
@@ -1806,6 +1817,7 @@ function InitHeros()
 				hero:SetModelScale(hero.init_model_scale)
 				hero.ori_model = onduty_hero_model
 
+				hero.onduty_hero = onduty_hero
 				hero.steam_id = steam_id
 
 				hero:MoveToPosition(hero:GetAbsOrigin())
@@ -1916,6 +1928,7 @@ function InitHeros()
 					zhugong_model = GameRules:GetGameModeEntity().sm_hero_list[onduty_hero],
 					zhugong_effect = onduty_hero_effect,
 					round = 0,
+					gold = 0,
 					win_round = 0,
 					lose_round = 0,
 					draw_round = 0,
@@ -1936,6 +1949,7 @@ function InitHeros()
 				hero.ori_model = onduty_hero_model
 
 				hero.steam_id = steam_id
+				hero.onduty_hero = onduty_hero
 
 				hero:MoveToPosition(hero:GetAbsOrigin())
 				AddAbilityAndSetLevel(hero,'pick_chess')
@@ -2008,6 +2022,7 @@ function InitHeros()
 				zhugong_model = GameRules:GetGameModeEntity().sm_hero_list[onduty_hero],
 				zhugong_effect = onduty_hero_effect,
 				round = 0,
+				gold = 0,
 				win_round = 0,
 				lose_round = 0,
 				draw_round = 0,
@@ -2028,6 +2043,7 @@ function InitHeros()
 			hero.ori_model = onduty_hero_model
 
 			hero.steam_id = steam_id
+			hero.onduty_hero = onduty_hero
 
 			hero:MoveToPosition(hero:GetAbsOrigin())
 			AddAbilityAndSetLevel(hero,'pick_chess')
@@ -3163,8 +3179,10 @@ function RandomRecallChess()
 						})
 					end
 					recalled = recalled + 1
+					return 0.05
+				else
+					return
 				end
-				return 0.05
 			end)
 		end
 	end
@@ -3495,6 +3513,9 @@ function RemoveChess(keys)
 	
 	play_particle("particles/units/heroes/hero_shadowshaman/shadowshaman_voodoo.vpcf",PATTACH_ABSORIGIN_FOLLOW,target,3)
 	EmitSoundOn("Hero_Lion.Voodoo",caster)
+
+
+	local is_removing_hand = false
 	if target.hand_index == nil then
 		-- DeepPrintTable(GameRules:GetGameModeEntity().mychess[team_id])
 		-- print(target.y_x)
@@ -3508,6 +3529,7 @@ function RemoveChess(keys)
 			count = GameRules:GetGameModeEntity().population[team_id],
 		})
 	else
+		is_removing_hand = true
 		GameRules:GetGameModeEntity().hand[team_id][target.hand_index] = 0
 		-- prt(team_id..'手牌'..target.hand_index..'清空')
 		caster.hand_entities[target.hand_index] = nil
@@ -3590,7 +3612,9 @@ function RemoveChess(keys)
 		is_hand_full = IsHandFull(team_id)
 	})
 
-	StatClassCount(team_id)
+	if is_removing_hand == false then
+		StatClassCount(team_id)
+	end
 end
 --触发team_id的场地中i,j这个格子的棋子合成
 function TriggerChessCombineAtGrid(i,j,team_id)
@@ -3801,10 +3825,12 @@ function SyncHP(hero)
 
 		--保存最终阵容
 		local lineup = ''
+		local lineup_count = 0
 		for _,v in pairs(GameRules:GetGameModeEntity().mychess[hero:GetTeam()]) do
-			if v ~= nil and v.chess ~= nil then 
+			if v ~= nil and v.chess ~= nil and lineup_count < hero:GetLevel() then 
 				lineup = lineup..v.chess..','
 				AddAChessToChessPool(v.chess)
+				lineup_count = lineup_count + 1
 			end
 		end
 
@@ -6183,84 +6209,48 @@ function IsBlocked(x,y,team_id)
 	end
 	return false
 end
---自制的tk技能
-function RandomMissile(keys)
+
+--TK：热导飞弹
+function RandomMissileStart(keys)
 	local caster = keys.caster
-	local us = FindUnitsInRadius(caster.team_id,caster:GetAbsOrigin(),nil,600,DOTA_UNIT_TARGET_TEAM_ENEMY,DOTA_UNIT_TARGET_ALL,DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS+DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE+DOTA_UNIT_TARGET_FLAG_NO_INVIS,FIND_CLOSEST,false)
-
-	local unluckydog = us[RandomInt(1,table.maxn(us))]
-	local u = CreateUnitByName("invisible_unit", caster:GetAbsOrigin() ,false,nil,nil, caster.team_id) 
-	u:AddAbility('a108_missile')
-	u:FindAbilityByName('a108_missile'):SetLevel(1)
-
-	if unluckydog == nil then
-		return
-	end
-	
-	Timers:CreateTimer(0.1,function()
-		local newOrder = {
-	 		UnitIndex = u:entindex(), 
-	 		OrderType = DOTA_UNIT_ORDER_CAST_TARGET,
-	 		TargetIndex = unluckydog:entindex(), --Optional.  Only used when targeting units
-	 		AbilityIndex = u:FindAbilityByName("a108_missile"):entindex(), --Optional.  Only used when casting abilities
-	 		Position = nil, --Optional.  Only used when targeting the ground
-	 		Queue = 0 --Optional.  Used for queueing up abilities
-	 	}
-		ExecuteOrderFromTable(newOrder)
-		Timers:CreateTimer(5,function()
-			u:ForceKill(false)
-		end)
-	end)
-
+	--三连发
+	RandomMissileOne({ caster = keys.caster, ability = keys.ability })
 	Timers:CreateTimer(0.3,function()
-		if caster == nil or caster:IsNull() == true or caster:IsAlive() == false then
-			return
-		end
-		unluckydog = us[RandomInt(1,table.maxn(us))]
-		local v = CreateUnitByName("invisible_unit", caster:GetAbsOrigin() ,false,nil,nil, caster.team_id) 
-		v:AddAbility('a108_missile')
-		v:FindAbilityByName('a108_missile'):SetLevel(1)
-		
-		Timers:CreateTimer(0.1,function()
-			local newOrder = {
-		 		UnitIndex = v:entindex(), 
-		 		OrderType = DOTA_UNIT_ORDER_CAST_TARGET,
-		 		TargetIndex = unluckydog:entindex(), --Optional.  Only used when targeting units
-		 		AbilityIndex = v:FindAbilityByName("a108_missile"):entindex(), --Optional.  Only used when casting abilities
-		 		Position = nil, --Optional.  Only used when targeting the ground
-		 		Queue = 0 --Optional.  Used for queueing up abilities
-		 	}
-			ExecuteOrderFromTable(newOrder)
-			Timers:CreateTimer(5,function()
-				v:ForceKill(false)
-			end)
-		end)
-	end)
-	Timers:CreateTimer(0.5,function()
-		if caster == nil or caster:IsNull() == true or caster:IsAlive() == false then
-			return
-		end
-		unluckydog = us[RandomInt(1,table.maxn(us))]
-		local v = CreateUnitByName("invisible_unit", caster:GetAbsOrigin() ,false,nil,nil, caster.team_id) 
-		v:AddAbility('a108_missile')
-		v:FindAbilityByName('a108_missile'):SetLevel(1)
-		
-		Timers:CreateTimer(0.1,function()
-			local newOrder = {
-		 		UnitIndex = v:entindex(), 
-		 		OrderType = DOTA_UNIT_ORDER_CAST_TARGET,
-		 		TargetIndex = unluckydog:entindex(), --Optional.  Only used when targeting units
-		 		AbilityIndex = v:FindAbilityByName("a108_missile"):entindex(), --Optional.  Only used when casting abilities
-		 		Position = nil, --Optional.  Only used when targeting the ground
-		 		Queue = 0 --Optional.  Used for queueing up abilities
-		 	}
-			ExecuteOrderFromTable(newOrder)
-			Timers:CreateTimer(5,function()
-				v:ForceKill(false)
-			end)
+		RandomMissileOne({ caster = keys.caster, ability = keys.ability })
+		Timers:CreateTimer(0.3,function()
+			RandomMissileOne({ caster = keys.caster, ability = keys.ability })
 		end)
 	end)
 end
+function RandomMissileOne(keys)
+	--对一个随机的unluckydog发射导弹
+	local unlucky_dog = FindUnluckyDog(keys.caster)
+	if (unlucky_dog:GetAbsOrigin() - keys.caster:GetAbsOrigin()):Length2D() < 1500 then
+	    ProjectileManager:CreateTrackingProjectile({
+	        Target = unlucky_dog,
+	        Source = keys.caster,
+	        Ability = keys.ability,
+	        EffectName = "particles/units/heroes/hero_tinker/tinker_missile.vpcf",
+	        bDodgeable = false,
+	        iMoveSpeed = 500,
+	        bProvidesVision = false,
+	        iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_1
+	    })
+	    EmitSoundOn("Hero_Tinker.Heat-Seeking_Missile_Dud",caster)
+	end
+end
+function RandomMissileDamage(keys)
+	--导弹伤害
+    ApplyDamage({
+    	victim = keys.target,
+    	attacker = keys.caster,
+    	damage_type = DAMAGE_TYPE_MAGICAL,
+    	damage = keys.damage_per_missile
+    })
+    EmitSoundOn("Hero_Rattletrap.Rocket_Flare.Explode",keys.target)
+    play_particle("particles/units/heroes/hero_gyrocopter/gyro_guided_missile_explosion.vpcf",PATTACH_OVERHEAD_FOLLOW,keys.target,3)
+end
+
 --通用方法之添加技能
 function AddAbilityAndSetLevel(u,a,l)
 	if l == nil then
@@ -6687,7 +6677,12 @@ function DAC:OnPlayerChat(keys)
 		hero.init_model_scale = GameRules:GetGameModeEntity().sm_hero_size[tokens[2]] or 1
 		hero:SetModelScale(hero.init_model_scale)
 		hero.ori_model = onduty_hero_model
+		hero.onduty_hero = tokens[2]
 		prt('更换信使：'..tokens[2]..', 初始大小：'..hero.init_model_scale)
+		RemoveAbilityAndModifier(hero,'courier_fly')
+		if hero.flyup_effect ~= nil then
+			ParticleManager:DestroyParticle(hero.flyup_effect,true)
+		end
 	end
 	if tokens[1] == "-size" and GameRules:GetGameModeEntity().myself == true then
 		hero.init_model_scale = tokens[2]+0
@@ -6781,10 +6776,14 @@ function PlayParticleOnUnitUntilDeath(keys)
 
 	Timers:CreateTimer(0.1,function()
 		if u == nil or u:IsNull() == true or u:IsAlive() == false then
-			ParticleManager:DestroyParticle(pp,true)
+			if pp ~= nil then
+				ParticleManager:DestroyParticle(pp,true)
+			end
 		end
 		return 0.1
 	end)
+
+	return pp
 end
 --高级选取单位，适应所有team
 function FindUnitsInRadiusByTeam(keys)
@@ -6961,7 +6960,7 @@ function show_damage(keys)
 		if attacker:FindModifierByName("modifier_item_wangguan") ~= nil or attacker:FindModifierByName("item_hongzhang_1") ~= nil or attacker:FindModifierByName("item_hongzhang_2") ~= nil or attacker:FindModifierByName("item_hongzhang_3") ~= nil or attacker:FindModifierByName("item_hongzhang_4") ~= nil or attacker:FindModifierByName("item_hongzhang_5") ~= nil then
 			mana_get = math.floor(mana_get * 1.5)
 		end
-		if attacker:FindModifierByName("modifier_item_xuwubaoshi") ~= nil or attacker:FindModifierByName("modifier_item_yangdao") ~= nil or caster:FindModifierByName("modifier_item_shenmifazhang") ~= nil then
+		if attacker:FindModifierByName("modifier_item_xuwubaoshi") ~= nil or attacker:FindModifierByName("modifier_item_yangdao") ~= nil or attacker:FindModifierByName("modifier_item_shenmifazhang") ~= nil then
 			mana_get = math.floor(mana_get * 2)
 		end
 		if attacker:FindModifierByName("modifier_item_jianrenqiu") ~= nil or attacker:FindModifierByName("modifier_item_kuangzhanfu") ~= nil then
@@ -7768,6 +7767,19 @@ function AddWinStreak(team)
 		hero:SetOriginalModel(new_m)
 		hero:SetModel(new_m)
 		AddAbilityAndSetLevel(hero,'courier_fly')
+
+		if hero.onduty_hero ~= nil and GameRules:GetGameModeEntity().courier_flyup_effect_list[hero.onduty_hero] ~= nil then
+			
+			--飞行特效（用于小虚空等特殊信使）
+			if hero.flyup_effect ~= nil then
+				ParticleManager:DestroyParticle(hero.flyup_effect,true)
+			end
+			local flyup_effect = GameRules:GetGameModeEntity().courier_flyup_effect_list[hero.onduty_hero]
+			hero.flyup_effect = PlayParticleOnUnitUntilDeath({
+				caster = hero,
+				p = flyup_effect,
+			})
+		end
 	end
 	hero:SetModelScale(sca)
 	if hero.win_streak == 5 or hero.win_streak == 8 or hero.win_streak == 10 then
@@ -7791,6 +7803,10 @@ function RemoveWinStreak(team)
 		hero:SetOriginalModel(hero.ori_model)
 		hero:SetModel(hero.ori_model)
 		RemoveAbilityAndModifier(hero,'courier_fly')
+
+		if hero.flyup_effect ~= nil then
+			ParticleManager:DestroyParticle(hero.flyup_effect,true)
+		end
 	end
 	hero.win_streak = 0
 	hero:SetModelScale(hero.init_model_scale or 1)
@@ -8017,7 +8033,7 @@ function SendHTTP(url, callback, fail_callback)
 		end
 	end
 	local req = CreateHTTPRequestScriptVM('GET', url)
-	req:SetHTTPRequestAbsoluteTimeoutMS(30000)
+	req:SetHTTPRequestAbsoluteTimeoutMS(20000)
 
     req:Send(function(res)
         if res.StatusCode ~= 200 or not res.Body then
@@ -8310,6 +8326,7 @@ end
 
 function ChangeFlyingCourierModel(opp_model)
 	local new_m = string.sub(opp_model,1,string.len(opp_model)-5)..'_flying.vmdl'
+
 	if opp_model == "models/courier/mighty_boar/mighty_boar.vmdl" then
 		new_m = "models/courier/mighty_boar/mighty_boar_wings.vmdl"
 	end
@@ -8394,6 +8411,7 @@ function DAC:OnChangeOndutyHero(keys)
 	hero:SetModel(onduty_hero_model)
 	hero.ori_model = onduty_hero_model
 	hero.is_changed_hero = true
+	hero.onduty_hero = onduty_hero
 
 	--换特效
 	if hero.effect ~= nil then
@@ -8423,6 +8441,11 @@ function DAC:OnChangeOndutyHero(keys)
 	GameRules:GetGameModeEntity().user_info[steam_id]['onduty_hero_effect'] = onduty_hero_effect
 
 	CustomNetTables:SetTableValue( "dac_table", "player_info", { info = GameRules:GetGameModeEntity().user_info, hehe = RandomInt(1,1000)})
+
+	RemoveAbilityAndModifier(hero,'courier_fly')
+	if hero.flyup_effect ~= nil then
+		ParticleManager:DestroyParticle(hero.flyup_effect,true)
+	end
 end
 function DAC:OnPreviewEffect(keys)
 	local h = PlayerId2Hero(keys.PlayerID) --   EntIndexToHScript(keys.hero_index)
@@ -8518,6 +8541,13 @@ function SendMaxData(t,dur)
 	    insertdata["total"] = data.total
 	    insertdata["level"] = data.level
 	    insertdata["chess"] = GameRules:GetGameModeEntity().stat_info[user]['chess_lineup']
+	    insertdata["win_round"] = GameRules:GetGameModeEntity().stat_info[user]['win_round']
+	    insertdata["lose_round"] = GameRules:GetGameModeEntity().stat_info[user]['lose_round']
+	    insertdata["kills"] = GameRules:GetGameModeEntity().stat_info[user]['kills']
+	    insertdata["deaths"] = GameRules:GetGameModeEntity().stat_info[user]['deaths']
+	    insertdata["gold"] = GameRules:GetGameModeEntity().stat_info[user]['gold']
+	    insertdata["candy"] = GameRules:GetGameModeEntity().stat_info[user]['candy']
+	    insertdata["duration"] = GameRules:GetGameModeEntity().stat_info[user]['duration']
 	    table.insert(max_data['players'],insertdata)
 	end
 	SendHTTPPost(max_url,max_data)
@@ -8768,6 +8798,13 @@ function CleaveAttack( keys )
 	end
 end
 
+function HideCombo(keys)
+	local team_id = keys.team_id
+	local hero = TeamId2Hero(team_id)
+	for _,k in pairs(GameRules:GetGameModeEntity().class_type) do
+		hero:RemoveModifierByName('modifier_show_combo_'..k)
+	end
+end
 function ShowCombo(keys)
 	local team_id = keys.team_id
 	local hero = TeamId2Hero(team_id)
@@ -8800,15 +8837,16 @@ function ShowCombo(keys)
 		return a.score > b.score
 	end)
 
+	--将种族/职业现在各有几个了的BUFF按顺序显示在信使上
 	for i = 1,table.maxn(combo_array) do
-		local mm = combo_array[i]
-		local modifier_name = 'modifier_show_combo_'..mm.m
-		-- Timers:CreateTimer(i/100.0,function()
+		local modifier_i = combo_array[i]
+		local modifier_name = 'modifier_show_combo_'..modifier_i.m
+		Timers:CreateTimer(i*0.03,function()
 			ability:ApplyDataDrivenModifier(hero,hero,modifier_name,{})
 			if hero:FindModifierByName(modifier_name) ~= nil then
-				hero:FindModifierByName(modifier_name):SetStackCount(mm.s)
+				hero:FindModifierByName(modifier_name):SetStackCount(modifier_i.s)
 			end
-		-- end)
+		end)
 	end
 end
 
