@@ -409,7 +409,7 @@
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"heal"	"200 300 400"
+				"heal"	"250 350 450"
 				"LinkedSpecialBonus"	"special_bonus_unique_omniknight_1"
 			}
 			"02"
@@ -520,7 +520,7 @@
 			"01"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"duration"	"20"
+				"duration"	"10 15 20"
 			}
 			"02"
 			{
@@ -550,7 +550,7 @@
 	{
 		"MaxLevel"	"3"
 		"AbilityCastPoint"	"0.5"
-		"AbilityCooldown"	"10"
+		"AbilityCooldown"	"15 12 9"
 		"AbilityManaCost"	"100"
 		"AbilityCastRange"	"9999"
 		"AbilitySpecial"
@@ -4178,7 +4178,7 @@
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"damage_per_missile"	"250 350 450"
+				"damage_per_missile"	"200 300 400"
 			}
 		}
 	}
@@ -8381,6 +8381,8 @@
 		"precache"
 		{
 			"particle"	"effect/lieren/1.vpcf"
+			"particle"	"effect/hunter/monkey_king_fur_army_positions.vpcf"
+			"soundfile"	"soundevents/game_sounds.vsndevts"
 		}
 		"Modifiers"
 		{
@@ -8390,13 +8392,57 @@
 				"IsDebuff"	"0"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"25"
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"	"30"
 				}
 				"IsBuff"	"1"
 				"States"	{}
 				"Passive"	"1"
 				"EffectName"	"effect/lieren/1.vpcf"
 				"EffectAttachType"	"follow_overhead"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"Target"	"CASTER"
+								"ModifierName"	"modifier_is_hunter_buff_jingzhun"
+							}
+						}
+						"Chance"	"30"
+						"PseudoRandom"	"DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
+					}
+				}
+			}
+			"modifier_is_hunter_buff_jingzhun"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_CANNOT_MISS"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"Target"	"CASTER"
+						"ModifierName"	"modifier_is_hunter_buff_jingzhun"
+					}
+					"FireEffect"
+					{
+						"Target"	"TARGET"
+						"EffectName"	"effect/hunter/monkey_king_fur_army_positions.vpcf"
+						"EffectAttachType"	"follow_overhead"
+					}
+					"FireSound"
+					{
+						"Target"	"TARGET"
+						"EffectName"	"Damage_Projectile.Player"
+					}
+				}
+				"IsHidden"	"1"
 			}
 		}
 	}
@@ -8411,6 +8457,8 @@
 		"precache"
 		{
 			"particle"	"effect/lieren/1.vpcf"
+			"particle"	"effect/hunter/monkey_king_fur_army_positions.vpcf"
+			"soundfile"	"soundevents/game_sounds.vsndevts"
 		}
 		"Modifiers"
 		{
@@ -8420,13 +8468,57 @@
 				"IsDebuff"	"0"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"30"
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"	"40"
 				}
 				"IsBuff"	"1"
 				"States"	{}
 				"Passive"	"1"
 				"EffectName"	"effect/lieren/1.vpcf"
 				"EffectAttachType"	"follow_overhead"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"Target"	"CASTER"
+								"ModifierName"	"modifier_is_hunter_buff_jingzhun_plus"
+							}
+						}
+						"Chance"	"40"
+						"PseudoRandom"	"DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
+					}
+				}
+			}
+			"modifier_is_hunter_buff_jingzhun_plus"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_CANNOT_MISS"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"Target"	"CASTER"
+						"ModifierName"	"modifier_is_hunter_buff_jingzhun_plus"
+					}
+					"FireEffect"
+					{
+						"Target"	"TARGET"
+						"EffectName"	"effect/hunter/monkey_king_fur_army_positions.vpcf"
+						"EffectAttachType"	"follow_overhead"
+					}
+					"FireSound"
+					{
+						"Target"	"TARGET"
+						"EffectName"	"Damage_Projectile.Player"
+					}
+				}
+				"IsHidden"	"1"
 			}
 		}
 	}
@@ -9364,7 +9456,7 @@
 					}
 					"Random"
 					{
-						"Chance"	"10"
+						"Chance"	"15"
 						"PseudoRandom"	"DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
 						"OnSuccess"
 						{
@@ -9532,7 +9624,7 @@
 					}
 					"Random"
 					{
-						"Chance"	"20"
+						"Chance"	"15"
 						"PseudoRandom"	"DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
 						"OnSuccess"
 						{
@@ -9798,6 +9890,16 @@
 		"MaxLevel"	"1"
 	}
 
+	"is_god"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"zuus_static_field_alt1"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"MaxLevel"	"1"
+	}
+
 	"boss_bianyang"
 	{
 		"BaseClass"	"ability_datadriven"
@@ -9878,7 +9980,7 @@
 		"MaxLevel"	"3"
 		"AbilityCastPoint"	"0"
 		"AbilityCastAnimation"	"ACT_DOTA_RUN"
-		"AbilityCooldown"	"12 10 8"
+		"AbilityCooldown"	"10 8 6"
 		"AbilityManaCost"	"0"
 		"AbilityCastRange"	"9999"
 		"AbilityCastRange"	"9999"
@@ -11296,7 +11398,7 @@
 			"04"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"stone_duration"	"2 3 4"
+				"stone_duration"	"2 2.5 3"
 			}
 			"05"
 			{
@@ -11362,10 +11464,10 @@
 	"alchemist_acid_spray"
 	{
 		"MaxLevel"	"3"
-		"AbilityCastPoint"	"0.3"
+		"AbilityCastPoint"	"0"
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_1"
-		"AbilityCooldown"	"10"
-		"AbilityManaCost"	"100"
+		"AbilityCooldown"	"0"
+		"AbilityManaCost"	"0"
 		"AbilityCastRange"	"9999"
 		"AbilitySpecial"
 		{
@@ -11377,17 +11479,17 @@
 			"02"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"duration"	"10"
+				"duration"	"15"
 			}
 			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"damage"	"15 25 35"
+				"damage"	"0"
 			}
 			"04"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"armor_reduction"	"5 8 11"
+				"armor_reduction"	"4 7 10"
 				"LinkedSpecialBonus"	"special_bonus_unique_alchemist_5"
 			}
 			"05"
@@ -13727,7 +13829,12 @@
 	"invisible_to_enemy"
 	{
 		"BaseClass"	"ability_datadriven"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"riki_permanent_invisibility"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"precache"
+		{
+			"particle"	"effect/satyr_3/dust_of_appearance_true_sight.vpcf"
+		}
 		"Modifiers"
 		{
 			"modifier_invisible_to_enemy"
@@ -13740,6 +13847,10 @@
 					"MODIFIER_STATE_INVISIBLE"	"MODIFIER_STATE_VALUE_ENABLED"
 				}
 				"Properties"	{}
+				"EffectName"	"effect/satyr_3/dust_of_appearance_true_sight.vpcf"
+				"EffectAttachType"	"follow_overhead"
+				"IsHidden"	"0"
+				"TextureName"	"riki_permanent_invisibility"
 			}
 		}
 	}
@@ -13862,7 +13973,7 @@
 		"MaxLevel"	"3"
 		"AbilityCastPoint"	"0.3"
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_2"
-		"AbilityCooldown"	"10 8 6"
+		"AbilityCooldown"	"8 6 4"
 		"AbilityManaCost"	"100"
 		"AbilityCastRange"	"99999"
 		"precache"
@@ -13936,7 +14047,7 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
 		"MaxLevel"	"3"
 		"AbilityCastPoint"	"0.3"
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_2"
@@ -13984,7 +14095,7 @@
 			"01"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"duration"	"60"
+				"duration"	"15"
 			}
 			"02"
 			{
@@ -14017,6 +14128,16 @@
 			{
 				"var_type"	"FIELD_INTEGER"
 				"bonus_movespeed"	"0 0 0"
+			}
+			"08"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"armor_reduce"	"4 7 10"
+			}
+			"09"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"acid_duration"	"15"
 			}
 		}
 		"AbilitySound"	"Hero_Alchemist.ChemicalRage.Cast"
