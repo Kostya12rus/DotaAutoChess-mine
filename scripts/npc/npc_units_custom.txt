@@ -2437,31 +2437,31 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"5396"
+					"ItemDef"	"8729"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"4769"
+					"ItemDef"	"8733"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"8534"
+					"ItemDef"	"5395"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"8543"
+					"ItemDef"	"8731"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"8535"
+					"ItemDef"	"5396"
 				}
 				"Wearable6"
 				{
-					"ItemDef"	"5395"
+					"ItemDef"	"8730"
 				}
 				"Wearable7"
 				{
-					"ItemDef"	"8536"
+					"ItemDef"	"5636"
 				}
 			}
 		}
@@ -2563,31 +2563,31 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"7277"
+					"ItemDef"	"8729"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"5636"
+					"ItemDef"	"8733"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"9729"
+					"ItemDef"	"7276"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"9723"
+					"ItemDef"	"8731"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"9726"
+					"ItemDef"	"7277"
 				}
 				"Wearable6"
 				{
-					"ItemDef"	"7276"
+					"ItemDef"	"9457"
 				}
 				"Wearable7"
 				{
-					"ItemDef"	"9725"
+					"ItemDef"	"8732"
 				}
 			}
 		}
@@ -3287,35 +3287,35 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"8341"
+					"ItemDef"	"8632"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"9884"
+					"ItemDef"	"12419"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"9885"
+					"ItemDef"	"251"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"9886"
+					"ItemDef"	"9908"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"6915"
+					"ItemDef"	"9909"
 				}
 				"Wearable6"
 				{
-					"ItemDef"	"251"
+					"ItemDef"	"5507"
 				}
 				"Wearable7"
 				{
-					"ItemDef"	"9906"
+					"ItemDef"	"9904"
 				}
 				"Wearable8"
 				{
-					"ItemDef"	"9794"
+					"ItemDef"	"9907"
 				}
 			}
 		}
@@ -3411,7 +3411,7 @@
 		"MinimapIconSize"	"256"
 		"AttackDamageMin"	"50"
 		"AttackDamageMax"	"70"
-		"AttackRate"	"1"
+		"AttackRate"	"1.1"
 		"AttackRange"	"205"
 		"Creature"
 		{
@@ -3535,7 +3535,7 @@
 		"MinimapIconSize"	"256"
 		"AttackDamageMin"	"100"
 		"AttackDamageMax"	"140"
-		"AttackRate"	"1"
+		"AttackRate"	"1.1"
 		"AttackRange"	"205"
 		"Creature"
 		{
@@ -3659,7 +3659,7 @@
 		"MinimapIconSize"	"256"
 		"AttackDamageMin"	"200"
 		"AttackDamageMax"	"280"
-		"AttackRate"	"1"
+		"AttackRate"	"1.1"
 		"AttackRange"	"205"
 		"Creature"
 		{
@@ -3667,27 +3667,31 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"7861"
+					"ItemDef"	"4469"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"7862"
+					"ItemDef"	"8009"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"7863"
+					"ItemDef"	"5096"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"7864"
+					"ItemDef"	"564"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"8009"
+					"ItemDef"	"4452"
 				}
 				"Wearable6"
 				{
 					"ItemDef"	"7866"
+				}
+				"Wearable7"
+				{
+					"ItemDef"	"7864"
 				}
 			}
 		}
@@ -3911,7 +3915,7 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"4707"
+					"ItemDef"	"6951"
 				}
 				"Wearable2"
 				{
@@ -3927,11 +3931,11 @@
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"602"
+					"ItemDef"	"4711"
 				}
 				"Wearable6"
 				{
-					"ItemDef"	"4711"
+					"ItemDef"	"7380"
 				}
 			}
 		}
@@ -4035,27 +4039,27 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"8267"
+					"ItemDef"	"9374"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"7551"
+					"ItemDef"	"9679"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"8071"
+					"ItemDef"	"9384"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"7553"
+					"ItemDef"	"9382"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"602"
+					"ItemDef"	"12328"
 				}
 				"Wearable6"
 				{
-					"ItemDef"	"7554"
+					"ItemDef"	"7380"
 				}
 			}
 		}
@@ -7218,7 +7222,7 @@
 		"MinimapIcon"	"minimap_creep"
 		"MinimapIconSize"	"256"
 		"AttackDamageMin"	"70"
-		"AttackDamageMax"	"110"
+		"AttackDamageMax"	"100"
 		"AttackRate"	"1.2"
 		"AttackRange"	"205"
 		"Creature"
@@ -7338,7 +7342,7 @@
 		"MinimapIcon"	"minimap_creep"
 		"MinimapIconSize"	"256"
 		"AttackDamageMin"	"140"
-		"AttackDamageMax"	"220"
+		"AttackDamageMax"	"200"
 		"AttackRate"	"1.2"
 		"AttackRange"	"205"
 		"Creature"
@@ -7458,7 +7462,7 @@
 		"MinimapIcon"	"minimap_creep"
 		"MinimapIconSize"	"256"
 		"AttackDamageMin"	"280"
-		"AttackDamageMax"	"440"
+		"AttackDamageMax"	"400"
 		"AttackRate"	"1.2"
 		"AttackRange"	"205"
 		"Creature"
@@ -8055,19 +8059,19 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"8980"
+					"ItemDef"	"12663"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"4922"
+					"ItemDef"	"12664"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"4923"
+					"ItemDef"	"12662"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"4924"
+					"ItemDef"	"12661"
 				}
 				"Wearable5"
 				{
@@ -8187,7 +8191,7 @@
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"8789"
+					"ItemDef"	"7506"
 				}
 				"Wearable5"
 				{
@@ -8535,23 +8539,23 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"8289"
+					"ItemDef"	"7740"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"8297"
+					"ItemDef"	"7792"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"7740"
+					"ItemDef"	"7790"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"5173"
+					"ItemDef"	"7878"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"8309"
+					"ItemDef"	"8739"
 				}
 			}
 		}
@@ -8655,23 +8659,23 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"7789"
+					"ItemDef"	"7740"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"7790"
+					"ItemDef"	"7947"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"7791"
+					"ItemDef"	"5337"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"7792"
+					"ItemDef"	"7878"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"7793"
+					"ItemDef"	"7950"
 				}
 			}
 		}
@@ -8775,23 +8779,23 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"7789"
+					"ItemDef"	"7740"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"7790"
+					"ItemDef"	"7947"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"7791"
+					"ItemDef"	"5337"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"7792"
+					"ItemDef"	"7878"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"7793"
+					"ItemDef"	"7950"
 				}
 			}
 		}
@@ -14085,6 +14089,366 @@
 	}
 
 	// 3
+	"chess_dazzle"
+	{
+		// General
+		//
+		// Class of entity of link to.
+		"BaseClass"	"npc_dota_creature"
+		"Model"	"models/heroes/dazzle/dazzle.vmdl"
+		"ModelScale"	"0.6"
+		// Abilities
+		// ----------------------------------------------------------------
+		// Ability 1.
+		"Ability1"	"is_troll"
+		// Ability 2.
+		"Ability2"	"is_priest"
+		// Ability 3.
+		"Ability3"	""
+		// Ability 4.
+		"Ability4"	""
+		// Ability 5.
+		"Ability5"	""
+		// Ability 6 - Extra.
+		"Ability6"	""
+		// Ability 7 - Extra.
+		"Ability7"	""
+		// Ability 8 - Extra.
+		"Ability8"	""
+		// Armor
+		// ----------------------------------------------------------------
+		// Physical protection.
+		"ArmorPhysical"	"5"
+		// Magical protection.
+		"MagicalResistance"	"0"
+		// Attack
+		// ----------------------------------------------------------------
+		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
+		// Movement
+		// ----------------------------------------------------------------
+		// Type of locomotion - ground, air
+		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_GROUND"
+		// Speed
+		"MovementSpeed"	"300"
+		// Turning rate.
+		"MovementTurnRate"	"10"
+		// Status
+		// ----------------------------------------------------------------
+		// Base health.
+		"StatusHealth"	"550"
+		// Health regeneration rate.
+		"StatusHealthRegen"	"0"
+		// Base mana.
+		"StatusMana"	"100"
+		// Mana regeneration rate.
+		"StatusManaRegen"	"0"
+		// Team
+		// ----------------------------------------------------------------
+		// Team name.
+		"TeamName"	"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"	"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"	"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		// Vision
+		// ----------------------------------------------------------------
+		// Range of vision during day light.
+		"VisionDaytimeRange"	"900"
+		// Range of vision at night time.
+		"VisionNighttimeRange"	"600"
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	"no_collision"
+		"Ability16"	"dac_guai_base"
+		"MinimapIcon"	"minimap_creep"
+		"MinimapIconSize"	"256"
+		"AttackDamageMin"	"50"
+		"AttackDamageMax"	"75"
+		"AttackRate"	"1.4"
+		"AttackRange"	"400"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"	"263"
+				}
+				"Wearable2"
+				{
+					"ItemDef"	"264"
+				}
+				"Wearable3"
+				{
+					"ItemDef"	"265"
+				}
+				"Wearable4"
+				{
+					"ItemDef"	"266"
+				}
+				"Wearable5"
+				{
+					"ItemDef"	"468"
+				}
+			}
+		}
+		"ProjectileModel"	"particles/units/heroes/hero_dazzle/dazzle_base_attack.vpcf"
+		"ProjectileSpeed"	"800"
+		"AttackAnimationPoint"	"0.3"
+		"HasInventory"	"1"
+		"Level"	"3"
+		"ConsideredHero"	"1"
+		"HealthBarOffset"	"150"
+		"RingRadius"	"60"
+		"SoundSet"	"Hero_Dazzle"
+		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts"
+		"VoiceFile"	"soundevents/voscripts/game_sounds_vo_dazzle.vsndevts"
+	}
+
+	// 3
+	"chess_dazzle1"
+	{
+		// General
+		//
+		// Class of entity of link to.
+		"BaseClass"	"npc_dota_creature"
+		"Model"	"models/heroes/dazzle/dazzle.vmdl"
+		"ModelScale"	"0.75"
+		// Abilities
+		// ----------------------------------------------------------------
+		// Ability 1.
+		"Ability1"	"is_troll"
+		// Ability 2.
+		"Ability2"	"is_priest"
+		// Ability 3.
+		"Ability3"	""
+		// Ability 4.
+		"Ability4"	""
+		// Ability 5.
+		"Ability5"	""
+		// Ability 6 - Extra.
+		"Ability6"	""
+		// Ability 7 - Extra.
+		"Ability7"	""
+		// Ability 8 - Extra.
+		"Ability8"	""
+		// Armor
+		// ----------------------------------------------------------------
+		// Physical protection.
+		"ArmorPhysical"	"5"
+		// Magical protection.
+		"MagicalResistance"	"0"
+		// Attack
+		// ----------------------------------------------------------------
+		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
+		// Movement
+		// ----------------------------------------------------------------
+		// Type of locomotion - ground, air
+		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_GROUND"
+		// Speed
+		"MovementSpeed"	"300"
+		// Turning rate.
+		"MovementTurnRate"	"10"
+		// Status
+		// ----------------------------------------------------------------
+		// Base health.
+		"StatusHealth"	"1100"
+		// Health regeneration rate.
+		"StatusHealthRegen"	"0"
+		// Base mana.
+		"StatusMana"	"100"
+		// Mana regeneration rate.
+		"StatusManaRegen"	"0"
+		// Team
+		// ----------------------------------------------------------------
+		// Team name.
+		"TeamName"	"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"	"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"	"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		// Vision
+		// ----------------------------------------------------------------
+		// Range of vision during day light.
+		"VisionDaytimeRange"	"900"
+		// Range of vision at night time.
+		"VisionNighttimeRange"	"600"
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	"no_collision"
+		"Ability16"	"dac_guai_base"
+		"MinimapIcon"	"minimap_creep"
+		"MinimapIconSize"	"256"
+		"AttackDamageMin"	"100"
+		"AttackDamageMax"	"150"
+		"AttackRate"	"1.4"
+		"AttackRange"	"400"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"	"6353"
+				}
+				"Wearable2"
+				{
+					"ItemDef"	"6354"
+				}
+				"Wearable3"
+				{
+					"ItemDef"	"6355"
+				}
+				"Wearable4"
+				{
+					"ItemDef"	"6356"
+				}
+				"Wearable5"
+				{
+					"ItemDef"	"6359"
+				}
+			}
+		}
+		"ProjectileModel"	"particles/units/heroes/hero_dazzle/dazzle_base_attack.vpcf"
+		"ProjectileSpeed"	"800"
+		"AttackAnimationPoint"	"0.3"
+		"HasInventory"	"1"
+		"Level"	"5"
+		"ConsideredHero"	"1"
+		"HealthBarOffset"	"150"
+		"RingRadius"	"60"
+		"SoundSet"	"Hero_Dazzle"
+		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts"
+		"VoiceFile"	"soundevents/voscripts/game_sounds_vo_dazzle.vsndevts"
+	}
+
+	// 3
+	"chess_dazzle11"
+	{
+		// General
+		//
+		// Class of entity of link to.
+		"BaseClass"	"npc_dota_creature"
+		"Model"	"models/heroes/dazzle/dazzle.vmdl"
+		"ModelScale"	"0.9"
+		// Abilities
+		// ----------------------------------------------------------------
+		// Ability 1.
+		"Ability1"	"is_troll"
+		// Ability 2.
+		"Ability2"	"is_priest"
+		// Ability 3.
+		"Ability3"	""
+		// Ability 4.
+		"Ability4"	""
+		// Ability 5.
+		"Ability5"	""
+		// Ability 6 - Extra.
+		"Ability6"	""
+		// Ability 7 - Extra.
+		"Ability7"	""
+		// Ability 8 - Extra.
+		"Ability8"	""
+		// Armor
+		// ----------------------------------------------------------------
+		// Physical protection.
+		"ArmorPhysical"	"5"
+		// Magical protection.
+		"MagicalResistance"	"0"
+		// Attack
+		// ----------------------------------------------------------------
+		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
+		// Movement
+		// ----------------------------------------------------------------
+		// Type of locomotion - ground, air
+		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_GROUND"
+		// Speed
+		"MovementSpeed"	"300"
+		// Turning rate.
+		"MovementTurnRate"	"10"
+		// Status
+		// ----------------------------------------------------------------
+		// Base health.
+		"StatusHealth"	"2200"
+		// Health regeneration rate.
+		"StatusHealthRegen"	"0"
+		// Base mana.
+		"StatusMana"	"100"
+		// Mana regeneration rate.
+		"StatusManaRegen"	"0"
+		// Team
+		// ----------------------------------------------------------------
+		// Team name.
+		"TeamName"	"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"	"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"	"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		// Vision
+		// ----------------------------------------------------------------
+		// Range of vision during day light.
+		"VisionDaytimeRange"	"900"
+		// Range of vision at night time.
+		"VisionNighttimeRange"	"600"
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	"no_collision"
+		"Ability16"	"dac_guai_base"
+		"MinimapIcon"	"minimap_creep"
+		"MinimapIconSize"	"256"
+		"AttackDamageMin"	"200"
+		"AttackDamageMax"	"300"
+		"AttackRate"	"1.4"
+		"AttackRange"	"400"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"	"7359"
+				}
+				"Wearable2"
+				{
+					"ItemDef"	"7356"
+				}
+				"Wearable3"
+				{
+					"ItemDef"	"8034"
+				}
+				"Wearable4"
+				{
+					"ItemDef"	"7358"
+				}
+				"Wearable5"
+				{
+					"ItemDef"	"7361"
+				}
+			}
+		}
+		"ProjectileModel"	"particles/units/heroes/hero_dazzle/dazzle_base_attack.vpcf"
+		"ProjectileSpeed"	"800"
+		"AttackAnimationPoint"	"0.3"
+		"HasInventory"	"1"
+		"Level"	"7"
+		"ConsideredHero"	"1"
+		"HealthBarOffset"	"150"
+		"RingRadius"	"60"
+		"SoundSet"	"Hero_Dazzle"
+		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts"
+		"VoiceFile"	"soundevents/voscripts/game_sounds_vo_dazzle.vsndevts"
+	}
+
+	// 3
 	"chess_kael"
 	{
 		// General
@@ -14554,6 +14918,7 @@
 		"SoundSet"	"Hero_DragonKnight"
 		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
 		"VoiceFile"	"soundevents/voscripts/game_sounds_vo_dragon_knight.vsndevts"
+		"ProjectileSpeed"	"800"
 	}
 
 	// 4
@@ -14643,31 +15008,31 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"7416"
+					"ItemDef"	"8963"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"7417"
+					"ItemDef"	"8974"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"7418"
+					"ItemDef"	"8975"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"7419"
+					"ItemDef"	"8978"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"7420"
+					"ItemDef"	"7671"
 				}
 				"Wearable6"
 				{
-					"ItemDef"	"7421"
+					"ItemDef"	"8976"
 				}
 				"Wearable7"
 				{
-					"ItemDef"	"9644"
+					"ItemDef"	"8977"
 				}
 			}
 		}
@@ -14682,6 +15047,7 @@
 		"SoundSet"	"Hero_DragonKnight"
 		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
 		"VoiceFile"	"soundevents/voscripts/game_sounds_vo_dragon_knight.vsndevts"
+		"ProjectileSpeed"	"800"
 	}
 
 	// 4
@@ -14771,31 +15137,31 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"6787"
+					"ItemDef"	"8799"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"6788"
+					"ItemDef"	"7419"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"6789"
+					"ItemDef"	"7438"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"6790"
+					"ItemDef"	"9135"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"6791"
+					"ItemDef"	"7671"
 				}
 				"Wearable6"
 				{
-					"ItemDef"	"6792"
+					"ItemDef"	"9134"
 				}
 				"Wearable7"
 				{
-					"ItemDef"	"7671"
+					"ItemDef"	"6925"
 				}
 			}
 		}
@@ -14810,6 +15176,7 @@
 		"SoundSet"	"Hero_DragonKnight"
 		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
 		"VoiceFile"	"soundevents/voscripts/game_sounds_vo_dragon_knight.vsndevts"
+		"ProjectileSpeed"	"800"
 	}
 
 	// 4
@@ -15900,6 +16267,354 @@
 		"VoiceFile"	"soundevents/voscripts/game_sounds_vo_viper.vsndevts"
 	}
 
+	// 3
+	"chess_gs"
+	{
+		// General
+		//
+		// Class of entity of link to.
+		"BaseClass"	"npc_dota_creature"
+		"Model"	"models/heroes/grimstroke/grimstroke.vmdl"
+		"ModelScale"	"0.55"
+		// Abilities
+		// ----------------------------------------------------------------
+		// Ability 1.
+		"Ability1"	"is_demon"
+		// Ability 2.
+		"Ability2"	"is_warlock"
+		// Ability 3.
+		"Ability3"	""
+		// Ability 4.
+		"Ability4"	""
+		// Ability 5.
+		"Ability5"	""
+		// Ability 6 - Extra.
+		"Ability6"	""
+		// Ability 7 - Extra.
+		"Ability7"	""
+		// Ability 8 - Extra.
+		"Ability8"	""
+		// Armor
+		// ----------------------------------------------------------------
+		// Physical protection.
+		"ArmorPhysical"	"5"
+		// Magical protection.
+		"MagicalResistance"	"20"
+		// Attack
+		// ----------------------------------------------------------------
+		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
+		// Movement
+		// ----------------------------------------------------------------
+		// Type of locomotion - ground, air
+		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_GROUND"
+		// Speed
+		"MovementSpeed"	"300"
+		// Turning rate.
+		"MovementTurnRate"	"10"
+		// Status
+		// ----------------------------------------------------------------
+		// Base health.
+		"StatusHealth"	"550"
+		// Health regeneration rate.
+		"StatusHealthRegen"	"0"
+		// Base mana.
+		"StatusMana"	"100"
+		// Mana regeneration rate.
+		"StatusManaRegen"	"0"
+		// Team
+		// ----------------------------------------------------------------
+		// Team name.
+		"TeamName"	"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"	"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"	"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		// Vision
+		// ----------------------------------------------------------------
+		// Range of vision during day light.
+		"VisionDaytimeRange"	"900"
+		// Range of vision at night time.
+		"VisionNighttimeRange"	"600"
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	"no_collision"
+		"Ability16"	"dac_guai_base"
+		"MinimapIcon"	"minimap_creep"
+		"MinimapIconSize"	"256"
+		"AttackDamageMin"	"50"
+		"AttackDamageMax"	"60"
+		"AttackRate"	"1.4"
+		"AttackRange"	"400"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"	"519"
+				}
+				"Wearable2"
+				{
+					"ItemDef"	"611"
+				}
+				"Wearable3"
+				{
+					"ItemDef"	"623"
+				}
+				"Wearable4"
+				{
+					"ItemDef"	"654"
+				}
+			}
+		}
+		"ProjectileModel"	"particles/units/heroes/hero_grimstroke/grimstroke_base_attack.vpcf"
+		"ProjectileSpeed"	"800"
+		"AttackAnimationPoint"	"0.33"
+		"HasInventory"	"1"
+		"Level"	"3"
+		"ConsideredHero"	"1"
+		"HealthBarOffset"	"150"
+		"RingRadius"	"60"
+		"SoundSet"	"Hero_Grimstroke"
+		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_grimstroke.vsndevts"
+		"VoiceFile"	"soundevents/voscripts/game_sounds_vo_grimstroke.vsndevts"
+	}
+
+	// 3
+	"chess_gs1"
+	{
+		// General
+		//
+		// Class of entity of link to.
+		"BaseClass"	"npc_dota_creature"
+		"Model"	"models/heroes/grimstroke/grimstroke.vmdl"
+		"ModelScale"	"0.7"
+		// Abilities
+		// ----------------------------------------------------------------
+		// Ability 1.
+		"Ability1"	"is_demon"
+		// Ability 2.
+		"Ability2"	"is_warlock"
+		// Ability 3.
+		"Ability3"	""
+		// Ability 4.
+		"Ability4"	""
+		// Ability 5.
+		"Ability5"	""
+		// Ability 6 - Extra.
+		"Ability6"	""
+		// Ability 7 - Extra.
+		"Ability7"	""
+		// Ability 8 - Extra.
+		"Ability8"	""
+		// Armor
+		// ----------------------------------------------------------------
+		// Physical protection.
+		"ArmorPhysical"	"5"
+		// Magical protection.
+		"MagicalResistance"	"20"
+		// Attack
+		// ----------------------------------------------------------------
+		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
+		// Movement
+		// ----------------------------------------------------------------
+		// Type of locomotion - ground, air
+		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_GROUND"
+		// Speed
+		"MovementSpeed"	"300"
+		// Turning rate.
+		"MovementTurnRate"	"10"
+		// Status
+		// ----------------------------------------------------------------
+		// Base health.
+		"StatusHealth"	"1100"
+		// Health regeneration rate.
+		"StatusHealthRegen"	"0"
+		// Base mana.
+		"StatusMana"	"100"
+		// Mana regeneration rate.
+		"StatusManaRegen"	"0"
+		// Team
+		// ----------------------------------------------------------------
+		// Team name.
+		"TeamName"	"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"	"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"	"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		// Vision
+		// ----------------------------------------------------------------
+		// Range of vision during day light.
+		"VisionDaytimeRange"	"900"
+		// Range of vision at night time.
+		"VisionNighttimeRange"	"600"
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	"no_collision"
+		"Ability16"	"dac_guai_base"
+		"MinimapIcon"	"minimap_creep"
+		"MinimapIconSize"	"256"
+		"AttackDamageMin"	"100"
+		"AttackDamageMax"	"120"
+		"AttackRate"	"1.4"
+		"AttackRange"	"400"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"	"519"
+				}
+				"Wearable2"
+				{
+					"ItemDef"	"611"
+				}
+				"Wearable3"
+				{
+					"ItemDef"	"623"
+				}
+				"Wearable4"
+				{
+					"ItemDef"	"654"
+				}
+			}
+		}
+		"ProjectileModel"	"particles/units/heroes/hero_grimstroke/grimstroke_base_attack.vpcf"
+		"ProjectileSpeed"	"800"
+		"AttackAnimationPoint"	"0.33"
+		"HasInventory"	"1"
+		"Level"	"5"
+		"ConsideredHero"	"1"
+		"HealthBarOffset"	"150"
+		"RingRadius"	"60"
+		"SoundSet"	"Hero_Grimstroke"
+		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_grimstroke.vsndevts"
+		"VoiceFile"	"soundevents/voscripts/game_sounds_vo_grimstroke.vsndevts"
+	}
+
+	// 3
+	"chess_gs11"
+	{
+		// General
+		//
+		// Class of entity of link to.
+		"BaseClass"	"npc_dota_creature"
+		"Model"	"models/heroes/grimstroke/grimstroke.vmdl"
+		"ModelScale"	"0.85"
+		// Abilities
+		// ----------------------------------------------------------------
+		// Ability 1.
+		"Ability1"	"is_demon"
+		// Ability 2.
+		"Ability2"	"is_warlock"
+		// Ability 3.
+		"Ability3"	""
+		// Ability 4.
+		"Ability4"	""
+		// Ability 5.
+		"Ability5"	""
+		// Ability 6 - Extra.
+		"Ability6"	""
+		// Ability 7 - Extra.
+		"Ability7"	""
+		// Ability 8 - Extra.
+		"Ability8"	""
+		// Armor
+		// ----------------------------------------------------------------
+		// Physical protection.
+		"ArmorPhysical"	"5"
+		// Magical protection.
+		"MagicalResistance"	"20"
+		// Attack
+		// ----------------------------------------------------------------
+		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
+		// Movement
+		// ----------------------------------------------------------------
+		// Type of locomotion - ground, air
+		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_GROUND"
+		// Speed
+		"MovementSpeed"	"300"
+		// Turning rate.
+		"MovementTurnRate"	"10"
+		// Status
+		// ----------------------------------------------------------------
+		// Base health.
+		"StatusHealth"	"2200"
+		// Health regeneration rate.
+		"StatusHealthRegen"	"0"
+		// Base mana.
+		"StatusMana"	"100"
+		// Mana regeneration rate.
+		"StatusManaRegen"	"0"
+		// Team
+		// ----------------------------------------------------------------
+		// Team name.
+		"TeamName"	"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"	"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"	"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		// Vision
+		// ----------------------------------------------------------------
+		// Range of vision during day light.
+		"VisionDaytimeRange"	"900"
+		// Range of vision at night time.
+		"VisionNighttimeRange"	"600"
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	"no_collision"
+		"Ability16"	"dac_guai_base"
+		"MinimapIcon"	"minimap_creep"
+		"MinimapIconSize"	"256"
+		"AttackDamageMin"	"200"
+		"AttackDamageMax"	"240"
+		"AttackRate"	"1.4"
+		"AttackRange"	"400"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"	"519"
+				}
+				"Wearable2"
+				{
+					"ItemDef"	"611"
+				}
+				"Wearable3"
+				{
+					"ItemDef"	"623"
+				}
+				"Wearable4"
+				{
+					"ItemDef"	"654"
+				}
+			}
+		}
+		"ProjectileModel"	"particles/units/heroes/hero_grimstroke/grimstroke_base_attack.vpcf"
+		"ProjectileSpeed"	"800"
+		"AttackAnimationPoint"	"0.33"
+		"HasInventory"	"1"
+		"Level"	"7"
+		"ConsideredHero"	"1"
+		"HealthBarOffset"	"150"
+		"RingRadius"	"60"
+		"SoundSet"	"Hero_Grimstroke"
+		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_grimstroke.vsndevts"
+		"VoiceFile"	"soundevents/voscripts/game_sounds_vo_grimstroke.vsndevts"
+	}
+
 	// 4
 	"chess_ld"
 	{
@@ -16107,35 +16822,31 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"8871"
+					"ItemDef"	"8866"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"8870"
+					"ItemDef"	"8869"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"8869"
+					"ItemDef"	"8871"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"8866"
+					"ItemDef"	"8865"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"8865"
+					"ItemDef"	"4764"
 				}
 				"Wearable6"
 				{
-					"ItemDef"	"8864"
+					"ItemDef"	"8870"
 				}
 				"Wearable7"
 				{
 					"ItemDef"	"8863"
-				}
-				"Wearable8"
-				{
-					"ItemDef"	"5105"
 				}
 			}
 		}
@@ -16243,31 +16954,31 @@
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"12879"
+					"ItemDef"	"12886"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"12880"
+					"ItemDef"	"12884"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"12882"
+					"ItemDef"	"12880"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"12883"
+					"ItemDef"	"12882"
 				}
 				"Wearable6"
 				{
-					"ItemDef"	"12884"
+					"ItemDef"	"4764"
 				}
 				"Wearable7"
 				{
-					"ItemDef"	"12885"
+					"ItemDef"	"12879"
 				}
 				"Wearable8"
 				{
-					"ItemDef"	"12886"
+					"ItemDef"	"12883"
 				}
 			}
 		}
@@ -17015,31 +17726,31 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"6873"
+					"ItemDef"	"9741"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"7649"
+					"ItemDef"	"6888"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"7648"
+					"ItemDef"	"6822"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"9741"
+					"ItemDef"	"6887"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"7646"
+					"ItemDef"	"6873"
 				}
 				"Wearable6"
 				{
-					"ItemDef"	"6888"
+					"ItemDef"	"6821"
 				}
 				"Wearable7"
 				{
-					"ItemDef"	"7645"
+					"ItemDef"	"6947"
 				}
 			}
 		}
@@ -17623,19 +18334,19 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"7867"
+					"ItemDef"	"9677"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"7873"
+					"ItemDef"	"12561"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"7875"
+					"ItemDef"	"7867"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"9677"
+					"ItemDef"	"7875"
 				}
 			}
 		}
@@ -17739,19 +18450,19 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"9595"
+					"ItemDef"	"12559"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"9596"
+					"ItemDef"	"7818"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"7818"
+					"ItemDef"	"12562"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"9676"
+					"ItemDef"	"12560"
 				}
 			}
 		}
@@ -18683,7 +19394,7 @@
 		"MinimapIconSize"	"256"
 		"AttackDamageMin"	"90"
 		"AttackDamageMax"	"110"
-		"AttackRate"	"1.2"
+		"AttackRate"	"1.1"
 		"AttackRange"	"400"
 		"Creature"
 		{
@@ -18803,7 +19514,7 @@
 		"MinimapIconSize"	"256"
 		"AttackDamageMin"	"180"
 		"AttackDamageMax"	"220"
-		"AttackRate"	"1.2"
+		"AttackRate"	"1.1"
 		"AttackRange"	"400"
 		"Creature"
 		{
@@ -18923,7 +19634,7 @@
 		"MinimapIconSize"	"256"
 		"AttackDamageMin"	"360"
 		"AttackDamageMax"	"440"
-		"AttackRate"	"1.2"
+		"AttackRate"	"1.1"
 		"AttackRange"	"400"
 		"Creature"
 		{
@@ -18931,19 +19642,19 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"8278"
+					"ItemDef"	"8331"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"8280"
+					"ItemDef"	"9318"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"8287"
+					"ItemDef"	"5302"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"9318"
+					"ItemDef"	"8329"
 				}
 				"Wearable5"
 				{
@@ -19687,27 +20398,27 @@
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"4449"
+					"ItemDef"	"9084"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"4450"
+					"ItemDef"	"8131"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"8131"
+					"ItemDef"	"9380"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"4456"
+					"ItemDef"	"4466"
 				}
 				"Wearable6"
 				{
-					"ItemDef"	"4466"
+					"ItemDef"	"525"
 				}
 				"Wearable7"
 				{
-					"ItemDef"	"525"
+					"ItemDef"	"6460"
 				}
 			}
 		}
@@ -22418,7 +23129,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
 		"MagicalResistance"	"30"
 		// Attack
@@ -22435,7 +23146,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"950"
+		"StatusHealth"	"1000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -22538,7 +23249,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
 		"MagicalResistance"	"30"
 		// Attack
@@ -22555,7 +23266,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"1900"
+		"StatusHealth"	"2000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -22666,7 +23377,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
 		"MagicalResistance"	"30"
 		// Attack
@@ -22683,7 +23394,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"3800"
+		"StatusHealth"	"4000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -22723,35 +23434,39 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"	"6694"
+					"ItemDef"	"8632"
 				}
 				"Wearable2"
 				{
-					"ItemDef"	"12741"
+					"ItemDef"	"8566"
 				}
 				"Wearable3"
 				{
-					"ItemDef"	"12742"
+					"ItemDef"	"6694"
 				}
 				"Wearable4"
 				{
-					"ItemDef"	"12739"
+					"ItemDef"	"8802"
 				}
 				"Wearable5"
 				{
-					"ItemDef"	"505"
+					"ItemDef"	"9257"
 				}
 				"Wearable6"
 				{
-					"ItemDef"	"12738"
+					"ItemDef"	"505"
 				}
 				"Wearable7"
 				{
-					"ItemDef"	"12743"
+					"ItemDef"	"568"
 				}
 				"Wearable8"
 				{
-					"ItemDef"	"9260"
+					"ItemDef"	"12743"
+				}
+				"Wearable9"
+				{
+					"ItemDef"	"6047"
 				}
 			}
 		}
@@ -24250,7 +24965,7 @@
 		"BountyXP"	"0"
 		"BountyGoldMin"	"0"
 		"BountyGoldMax"	"0"
-		"StatusHealth"	"200"
+		"StatusHealth"	"250"
 		"StatusHealthRegen"	"0"
 		"StatusMana"	"0"
 		"StatusManaRegen"	"0"
@@ -24303,7 +25018,7 @@
 		"BountyXP"	"0"
 		"BountyGoldMin"	"0"
 		"BountyGoldMax"	"0"
-		"StatusHealth"	"300"
+		"StatusHealth"	"400"
 		"StatusHealthRegen"	"0"
 		"StatusMana"	"0"
 		"StatusManaRegen"	"0"
@@ -24356,7 +25071,7 @@
 		"BountyXP"	"0"
 		"BountyGoldMin"	"0"
 		"BountyGoldMax"	"0"
-		"StatusHealth"	"400"
+		"StatusHealth"	"550"
 		"StatusHealthRegen"	"0"
 		"StatusMana"	"0"
 		"StatusManaRegen"	"0"

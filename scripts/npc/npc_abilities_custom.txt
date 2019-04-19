@@ -633,6 +633,16 @@
 				"var_type"	"FIELD_FLOAT"
 				"damage_delay"	"0.25"
 			}
+			"04"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"fiery_soul_duration"	"30"
+			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"fiery_soul_attack_speed_bonus"	"40 60 80"
+			}
 		}
 	}
 
@@ -8208,7 +8218,7 @@
 				"IsDebuff"	"0"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"40"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"35"
 				}
 				"Passive"	"1"
 				"EffectName"	"particles/units/heroes/hero_siren/naga_siren_song_debuff_b.vpcf"
@@ -8237,7 +8247,7 @@
 				"IsDebuff"	"0"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"30"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"35"
 				}
 				"Passive"	"1"
 				"EffectName"	"particles/units/heroes/hero_siren/naga_siren_song_debuff_b.vpcf"
@@ -8257,7 +8267,6 @@
 		"precache"
 		{
 			"particle"	"effect/shushi/bloodseeker/warlock_shadow_word_debuff_j.vpcf"
-			"particle"	"particles/generic_gameplay/generic_lifesteal.vpcf"
 		}
 		"Modifiers"
 		{
@@ -8268,23 +8277,6 @@
 				"Properties"	{}
 				"IsBuff"	"1"
 				"States"	{}
-				"OnAttackLanded"
-				{
-					"AttachEffect"
-					{
-						"Target"	"ATTACKER"
-						"EffectAttachType"	"follow_overhead"
-						"EffectName"	"particles/generic_gameplay/generic_lifesteal.vpcf"
-					}
-					"RunScript"
-					{
-						"Target"	"ATTACKER"
-						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
-						"Function"	"AttackHeal"
-						"damage"	"%attack_damage"
-						"per"	"0.20"
-					}
-				}
 				"Passive"	"1"
 				"EffectName"	"effect/shushi/bloodseeker/warlock_shadow_word_debuff_j.vpcf"
 				"EffectAttachType"	"follow_origin"
@@ -8302,7 +8294,6 @@
 		"precache"
 		{
 			"particle"	"effect/shushi/bloodseeker/warlock_shadow_word_debuff_j.vpcf"
-			"particle"	"particles/generic_gameplay/generic_lifesteal.vpcf"
 		}
 		"Modifiers"
 		{
@@ -8313,23 +8304,6 @@
 				"Properties"	{}
 				"IsBuff"	"1"
 				"States"	{}
-				"OnAttackLanded"
-				{
-					"AttachEffect"
-					{
-						"Target"	"ATTACKER"
-						"EffectAttachType"	"follow_overhead"
-						"EffectName"	"particles/generic_gameplay/generic_lifesteal.vpcf"
-					}
-					"RunScript"
-					{
-						"Target"	"ATTACKER"
-						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
-						"Function"	"AttackHeal"
-						"damage"	"%attack_damage"
-						"per"	"0.30"
-					}
-				}
 				"Passive"	"1"
 				"EffectName"	"effect/shushi/bloodseeker/warlock_shadow_word_debuff_j.vpcf"
 				"EffectAttachType"	"follow_origin"
@@ -8733,7 +8707,7 @@
 						"Target"	"CASTER"
 						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
 						"Function"	"AddMaxHP"
-						"hp"	"200"
+						"hp"	"250"
 					}
 				}
 			}
@@ -8774,7 +8748,7 @@
 						"Target"	"CASTER"
 						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
 						"Function"	"AddMaxHP"
-						"hp"	"300"
+						"hp"	"350"
 					}
 				}
 			}
@@ -8815,7 +8789,7 @@
 						"Target"	"CASTER"
 						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
 						"Function"	"AddMaxHP"
-						"hp"	"400"
+						"hp"	"450"
 					}
 				}
 			}
@@ -9336,7 +9310,7 @@
 		"precache"
 		{
 			"particle"	"effect/qishi/1.vpcf"
-			"particle"	"particles/econ/items/omniknight/omni_ti8_head/omniknight_repel_buff_ti8.vpcf"
+			"particle"	"effect/knight/1.vpcf"
 		}
 		"Modifiers"
 		{
@@ -9378,10 +9352,19 @@
 					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"30"
 				}
 				"States"	{}
-				"EffectName"	"particles/econ/items/omniknight/omni_ti8_head/omniknight_repel_buff_ti8.vpcf"
+				"EffectName"	"effect/knight/1.vpcf"
 				"EffectAttachType"	"follow_origin"
 				"IsHidden"	"1"
 				"IsBuff"	"1"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"OnKnightBuffCreate"
+					}
+				}
 			}
 		}
 	}
@@ -9396,7 +9379,7 @@
 		"precache"
 		{
 			"particle"	"effect/qishi/1.vpcf"
-			"particle"	"particles/econ/items/omniknight/omni_ti8_head/omniknight_repel_buff_ti8.vpcf"
+			"particle"	"effect/knight/1.vpcf"
 		}
 		"Modifiers"
 		{
@@ -9438,10 +9421,19 @@
 					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"75"
 				}
 				"States"	{}
-				"EffectName"	"particles/econ/items/omniknight/omni_ti8_head/omniknight_repel_buff_ti8.vpcf"
+				"EffectName"	"effect/knight/1.vpcf"
 				"EffectAttachType"	"follow_origin"
 				"IsHidden"	"1"
 				"IsBuff"	"1"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"OnKnightBuffCreate"
+					}
+				}
 			}
 		}
 	}
@@ -9456,7 +9448,7 @@
 		"precache"
 		{
 			"particle"	"effect/qishi/1.vpcf"
-			"particle"	"particles/econ/items/omniknight/omni_ti8_head/omniknight_repel_buff_ti8.vpcf"
+			"particle"	"effect/knight/1.vpcf"
 		}
 		"Modifiers"
 		{
@@ -9498,10 +9490,19 @@
 					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"75"
 				}
 				"States"	{}
-				"EffectName"	"particles/econ/items/omniknight/omni_ti8_head/omniknight_repel_buff_ti8.vpcf"
+				"EffectName"	"effect/knight/1.vpcf"
 				"EffectAttachType"	"follow_origin"
 				"IsHidden"	"1"
 				"IsBuff"	"1"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"OnKnightBuffCreate"
+					}
+				}
 			}
 		}
 	}
@@ -9618,7 +9619,7 @@
 					}
 					"Random"
 					{
-						"Chance"	"20"
+						"Chance"	"15"
 						"PseudoRandom"	"DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
 						"OnSuccess"
 						{
@@ -10037,6 +10038,15 @@
 		"AbilityManaCost"	"100"
 		"AbilityCastRange"	"9999"
 		"AbilityCastRange"	"9999"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"Target"	"TARGET"
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"TriggerHex"
+			}
+		}
 		"AbilitySpecial"
 		{
 			"01"
@@ -11598,13 +11608,19 @@
 			"ApplyModifier"
 			{
 				"Target"	"TARGET"
-				"Duration"	"5"
+				"Duration"	"8"
 				"ModifierName"	"modifier_shadow_shaman_voodoo"
 			}
 			"FireSound"
 			{
 				"Target"	"CASTER"
 				"EffectName"	"Hero_Lion.Voodoo"
+			}
+			"RunScript"
+			{
+				"Target"	"TARGET"
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"TriggerHex"
 			}
 		}
 	}
@@ -11636,6 +11652,12 @@
 			{
 				"Target"	"TARGET"
 				"EffectName"	"Hero_Lion.Voodoo"
+			}
+			"RunScript"
+			{
+				"Target"	"TARGET"
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"TriggerHex"
 			}
 		}
 	}
@@ -11903,7 +11925,7 @@
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"MaxLevel"	"3"
 		"AbilityCastPoint"	"0.3"
-		"AbilityCooldown"	"5"
+		"AbilityCooldown"	"5 4 3"
 		"AbilityManaCost"	"100"
 		"OnSpellStart"
 		{
@@ -12670,14 +12692,14 @@
 		"HotKeyOverride"	"L"
 		"precache"
 		{
-			"particle"	"sm/bingxueecon/courier/courier_trail_winter_2012/courier_trail_winter_2012.vpcf"
+			"particle"	"effect/snow2012/1econ/courier/courier_trail_winter_2012/courier_trail_winter_2012.vpcf"
 		}
 		"Modifiers"
 		{
 			"modifier_texiao_star"
 			{
 				"Passive"	"1"
-				"EffectName"	"sm/bingxueecon/courier/courier_trail_winter_2012/courier_trail_winter_2012.vpcf"
+				"EffectName"	"effect/snow2012/1econ/courier/courier_trail_winter_2012/courier_trail_winter_2012.vpcf"
 				"EffectAttachType"	"attach_origin"
 				"IsHidden"	"1"
 			}
@@ -13445,6 +13467,28 @@
 		}
 	}
 
+	"e322"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"wisp_overcharge"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"HotKeyOverride"	"L"
+		"precache"
+		{
+			"particle"	"effect/gewugu/flyup/ambient.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_texiao_star"
+			{
+				"Passive"	"1"
+				"EffectName"	"effect/gewugu/flyup/ambient.vpcf"
+				"EffectAttachType"	"follow_origin"
+				"IsHidden"	"1"
+			}
+		}
+	}
+
 	"e319"
 	{
 		"BaseClass"	"ability_datadriven"
@@ -13715,7 +13759,7 @@
 				"Target"	"POINT"
 				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
 				"Function"	"TinyTouzhi"
-				"radius"	"%radius"
+				"radius"	"%damage_radius"
 				"damage"	"%damage"
 				"stun"	"%stun_duration"
 			}
@@ -14802,6 +14846,47 @@
 					}
 				}
 				"Delay"	"0.01"
+			}
+		}
+	}
+
+	"give_fiery_soul"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"lina_fiery_soul"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"MaxLevel"	"3"
+		"AbilityCastPoint"	"0"
+		"AbilityCooldown"	"0"
+		"AbilityManaCost"	"0"
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_lina/lina_fiery_soul.vpcf"
+		}
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"	"TARGET"
+				"Duration"	"30"
+				"ModifierName"	"modifier_give_fiery_soul"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_give_fiery_soul"
+			{
+				"TextureName"	"lina_fiery_soul"
+				"EffectName"	"particles/units/heroes/hero_lina/lina_fiery_soul.vpcf"
+				"EffectAttachType"	"attach_origin"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"40 60 80"
+				}
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsBuff"	"1"
 			}
 		}
 	}
