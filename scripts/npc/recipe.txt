@@ -321,3 +321,18 @@
 	        "01"    "item_molifazhang;item_hongzhang_4"
 	    }
 	}
+
+	"item_recipe_zhaohuanshenshi"
+	{
+		"BaseClass"	"item_recipe_arcane_boots"
+		"ID"	"3037"
+		"ItemCost"	"0"
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_zhaohuanshenshi"
+		"ItemRequirements"
+		{
+			"01"	"item_huoliqiu;item_kuweishi;item_kuweishi;"
+		}
+	}
+
+	
